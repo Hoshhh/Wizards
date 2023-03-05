@@ -1,0 +1,1 @@
+InventoryAdd(id, irandom_range(2, item.height-2), 100)

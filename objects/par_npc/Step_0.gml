@@ -1,0 +1,1 @@
+if (!can_move) exit;
