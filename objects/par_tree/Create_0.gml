@@ -6,6 +6,10 @@ spr_tree = -1;
 spr_tree_hit = -1;
 hp = 10;
 
+selected = false;
+show_selected = false;
+instance = id;
+
 // Setup:
 sys_particle = part_system_create()
 part_system_layer(sys_particle, layer)

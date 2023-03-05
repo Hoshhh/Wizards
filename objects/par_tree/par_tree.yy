@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "par_tree",
-  "spriteId": {
-    "name": "spr_tree_base",
-    "path": "sprites/spr_tree_base/spr_tree_base.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": false,
   "managed": true,

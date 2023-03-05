@@ -17,8 +17,10 @@ w_spd = 0.5;
 n_spd = 1.25;
 r_spd = 2;
 
-xTo = 0;
-yTo = 0;
+currentSpell = 0;
+casting = false;
+farmSpellsRemaining = 1;
+
 moving = false;
 
 spd = n_spd;
@@ -38,12 +40,14 @@ idleTimer = 600;
 
 enum states {
 	free,
+	spell,
 	dialogue,
 	cutscene
 }
 
 state = states.free;
 states_array[states.free] = player_free;
+states_array[states.spell] = player_farming_spell;
 states_array[states.dialogue] = player_dialogue;
 states_array[states.cutscene] = player_cutscene;
 

@@ -3,8 +3,7 @@ function player_free(){
 	input_right		= keyboard_check(ord("D"));
 	input_up		= keyboard_check(ord("W"));
 	input_down		= keyboard_check(ord("S"));
-	input_push		= mouse_check_button_pressed(mb_left);
-	input_pull		= mouse_check_button_pressed(mb_right);
+	input_cast		= mouse_check_button_pressed(mb_left);
 	input_walk		= keyboard_check(vk_control);
 	input_run		= keyboard_check(vk_shift);
 	input_interact	= keyboard_check_pressed(ord("F"));
@@ -190,5 +189,15 @@ function player_free(){
 	}
 	
 	#endregion
+	
+	if (obj_player.currentSpell == 0 and input_cast and oInventory.show_inventory != true and crops.planting != true ) {
+		x_frame = 0;
+		spr = spr_farm;
+		image_index = 0;
+		image_speed = 1;
+		state = states.spell;
+		casting = true;	
+		idleTimer = 600;
+	}
 
 }

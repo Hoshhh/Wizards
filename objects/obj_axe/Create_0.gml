@@ -1,3 +1,3 @@
 event_inherited();
-collideable = false;
-swing = false;
+depth = -2
+collideable = true;
