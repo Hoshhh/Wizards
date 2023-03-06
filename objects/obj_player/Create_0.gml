@@ -19,7 +19,7 @@ r_spd = 2;
 
 currentSpell = 0;
 casting = false;
-farmSpellsRemaining = 1;
+farmSpellsRemaining = 2;
 
 moving = false;
 

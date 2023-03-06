@@ -1,3 +1,16 @@
 event_inherited();
 
-draw_text(x, y-8, string(hp))
+if (selected) {
+	image_alpha = 0.8
+} else {
+	image_alpha = 1;	
+}
+
+if (show_selected) {
+	image_alpha = 0.8
+} 
+
+if (!selected and !show_selected) {
+	image_alpha = 1;	
+}
+//draw_text(x, y-8, string(hp))

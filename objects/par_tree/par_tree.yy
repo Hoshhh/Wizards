@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Harvestables",
-    "path": "folders/Objects/Interactables/Harvestables.yy",
+    "name": "Trees",
+    "path": "folders/Objects/Interactables/Harvestables/Trees.yy",
   },
 }

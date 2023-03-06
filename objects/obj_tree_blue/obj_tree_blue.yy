@@ -35,7 +35,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"entityHasResources","path":"objects/pEntity/pEntity.yy",},"objectId":null,"value":"True",},
   ],
   "parent": {
-    "name": "Harvestables",
-    "path": "folders/Objects/Interactables/Harvestables.yy",
+    "name": "Trees",
+    "path": "folders/Objects/Interactables/Harvestables/Trees.yy",
   },
 }

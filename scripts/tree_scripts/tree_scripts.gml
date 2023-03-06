@@ -5,7 +5,7 @@ function tree_free(){
 	
 	var tree_inst = instance_position(mouse_x, mouse_y, id);
 
-	if (position_meeting(mouse_x, mouse_y, tree_inst) and obj_player.image_index <= 1 and obj_player.state == states.spell) {
+	if (position_meeting(mouse_x, mouse_y, tree_inst) and obj_player.image_index <= 1 and obj_player.state == states.spell and obj_player.farmSpellsRemaining > 0) {
 		instance = tree_inst;
 		selected = true;	
 	} 
