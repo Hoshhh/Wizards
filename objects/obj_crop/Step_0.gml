@@ -8,12 +8,17 @@ if (watered == true) {
 	var lay_id = layer_get_id("Dirt")
 	var map_id = layer_tilemap_get_id(lay_id)
 	
-	tilemap_set(map_id,30, x/16, y/16)		
+	tilemap_set(map_id,38, x/16, y/16)		
 } else if (watered == false) {
+	
 	var lay_id = layer_get_id("Dirt");
 	var map_id = layer_tilemap_get_id(lay_id);
 	
-	tilemap_set(map_id,28, x/16, y/16);	
+	//Used to place the right dirt tiles when the plants go from watered to not watered
+	var _tiledata = tilemap_get(map_id, x/16, x/16);
+	if (_tiledata == 34) {
+		tilemap_set(map_id,_tiledata, x/16, y/16);	
+	}
 }
 
 if (daysWithoutWater >= 3 ) { InstanceDeleteCrop(x, y) }

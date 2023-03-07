@@ -1,7 +1,7 @@
 switch(room)
 {
 	//Only add rooms that need day/night cycle
-	case rm_test:			draw_daylight = true; break;
+	case rm_main:			draw_daylight = true; break;
 	case rm_testing:		draw_daylight = true; break;
 	
 	default:				draw_daylight = false; break;

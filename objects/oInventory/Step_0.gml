@@ -3,12 +3,12 @@ if (instance_exists(obj_cutscene)) exit;
 name = global.name;
 
 //If seeds are selected on the toolbar, set variables in the crops object
-if (inventory[bar_selected_slot].itemInSlot == item.centauryseeds and room = rm_test and !show_inventory) {
+if (inventory[bar_selected_slot].itemInSlot == item.centauryseeds and room = rm_main and !show_inventory) {
 	with(crops) {
 		planting = true;
 		selectCrop = 0;	
 	}
-}else if (inventory[bar_selected_slot].itemInSlot == item.wolfsbaneseeds and room = rm_test and !show_inventory) {
+}else if (inventory[bar_selected_slot].itemInSlot == item.wolfsbaneseeds and room = rm_main and !show_inventory) {
 	with(crops) {
 		planting = true;
 		selectCrop = 1;	

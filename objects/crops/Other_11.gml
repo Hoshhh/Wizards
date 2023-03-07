@@ -1,4 +1,4 @@
-if (room = rm_test) {
+if (room = rm_main) {
 	if (instance_exists(obj_crop)) {
 		with(obj_crop) {
 			if (growthStage < maxGrowthStage) {

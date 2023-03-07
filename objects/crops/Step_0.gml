@@ -1,4 +1,4 @@
-if (room != rm_test) {planting = false; exit}
+if (room != rm_main) {planting = false; exit}
 
 #region Planting
 

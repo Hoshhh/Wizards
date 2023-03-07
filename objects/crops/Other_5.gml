@@ -1,4 +1,4 @@
-if (room == rm_test) {
+if (room == rm_main) {
 	var inst_num = instance_number(obj_crop)	
 	
 	if (inst_num == 0) {

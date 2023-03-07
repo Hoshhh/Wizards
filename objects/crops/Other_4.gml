@@ -1,4 +1,4 @@
-if (room == rm_test) {
+if (room == rm_main) {
 	ds_crops_instances = ds_grid_create(room_width div cellSize, room_height div cellSize);
 	ds_grid_clear(ds_crops_instances, 0);
 	

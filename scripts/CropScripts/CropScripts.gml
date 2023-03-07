@@ -54,7 +54,7 @@ function InstanceCreateCrop(_x,_y,_crop_type){
 		with(inst){
 			cropType = 	_crop_type;
 			growthStageDuration = crops.ds_crops_types[# 0, cropType];
-			item_produced = _crop_type + 23 //15 is the start of the crop items in the inventory and crop type shopuld be 0-1
+			item_produced = _crop_type + 24 //15 is the start of the crop items in the inventory and crop type shopuld be 0-1
 		}
 		
 		
