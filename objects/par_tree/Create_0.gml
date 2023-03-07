@@ -1,7 +1,10 @@
 event_inherited();
 
 image_index = irandom_range(0, image_number);
-item_produced = item.none;
+items_produced = [
+	item.none
+]
+
 spr_tree = -1;
 spr_tree_hit = -1;
 hp = 10;

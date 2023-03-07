@@ -123,7 +123,9 @@ enum item {
 	purpleberry				= 43,
 	redberry				= 44,
 	chest					= 45,
-	height					= 46,
+	wood					= 46,
+	stone					= 47,
+	height					= 48,
 }
 
 #region Item Info Array
@@ -356,6 +358,16 @@ item_info[44] = {
 
 item_info[45] = {
 	iname : "Chest",
+	quality : 1,
+}
+
+item_info[46] = {
+	iname : "Wood",
+	quality : 1,
+}
+
+item_info[47] = {
+	iname : "Stone",
 	quality : 1,
 }
 

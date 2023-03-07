@@ -5,8 +5,6 @@ function SaveRoom() {
 	var _chestNum = instance_number(obj_chest);
 	
 	var _roomStruct = {
-		treeNum		: _treeNum,
-		treeData	: array_create(_treeNum),
 		alchNum		: _alchTableNum,
 		alchData	: array_create(_alchTableNum),
 		chestNum	: _chestNum,
@@ -15,17 +13,6 @@ function SaveRoom() {
 	}
 	
 	//Get the data from the savable objects
-	
-	//Trees
-	for (var i = 0; i < _treeNum; i++) {
-		var _inst = instance_find(par_tree, i);
-		
-		_roomStruct.treeData[i] = {
-			x : _inst.x,
-			y : _inst.y,
-			item_produced : _inst.item_produced
-		}
-	}
 	
 	//Alchemy Tables
 	for (var i = 0; i < _alchTableNum; i++) {
@@ -64,31 +51,9 @@ function LoadRoom() {
 	if !is_struct(_roomStruct) exit;
 	
 	//Rocks - get rid of the default room editior objects, then create new ones
-	if (instance_exists(par_tree)) { instance_destroy(par_tree) }
 	if (instance_exists(obj_alchemy_table)) { instance_destroy(obj_alchemy_table) }
 	if (instance_exists(obj_chest)) { instance_destroy(obj_chest) }
 	
-	for (var i = 0; i < _roomStruct.treeNum; i++) {
-		if (_roomStruct.treeData[i].item_produced == item.none) {
-			instance_create_layer(_roomStruct.treeData[i].x, _roomStruct.treeData[i].y, "Instances", obj_tree_base);
-		}
-		
-		if (_roomStruct.treeData[i].item_produced == item.blueberry) {
-			instance_create_layer(_roomStruct.treeData[i].x, _roomStruct.treeData[i].y, "Instances", obj_tree_blue);
-		}
-		
-		if (_roomStruct.treeData[i].item_produced == item.greenberry) {
-			instance_create_layer(_roomStruct.treeData[i].x, _roomStruct.treeData[i].y, "Instances", obj_tree_green);
-		}
-		
-		if (_roomStruct.treeData[i].item_produced == item.redberry) {
-			instance_create_layer(_roomStruct.treeData[i].x, _roomStruct.treeData[i].y, "Instances", obj_tree_red);
-		}
-		
-		if (_roomStruct.treeData[i].item_produced == item.purpleberry) {
-			instance_create_layer(_roomStruct.treeData[i].x, _roomStruct.treeData[i].y, "Instances", obj_tree_purple);
-		}
-	}
 	
 	for (var i = 0; i < _roomStruct.alchNum; i++) {
 		instance_create_layer(_roomStruct.alchData[i].x, _roomStruct.alchData[i].y, "Instances", obj_alchemy_table)

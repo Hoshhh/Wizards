@@ -1,6 +1,8 @@
 event_inherited();
 
-item_produced = item.none;
+items_produced = [
+	item.none
+]
 spr_rock = -1;
 spr_rock_hit = -1;
 hp = 10;
