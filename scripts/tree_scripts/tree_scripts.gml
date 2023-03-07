@@ -25,6 +25,8 @@ function tree_free(){
 		state = treestates.hit;	
 		hp--;
 		image_index = 0;
+		var _psys = part_system_create(part_leafs);
+		part_system_position(_psys, x, y-24);
 	}
 	
 	
@@ -35,6 +37,7 @@ function tree_free(){
 
 function tree_hit(){
 	sprite_index = spr_tree_hit;
+	
 	
 	if (floor(image_index) >= 29) {
 		state = treestates.free;	

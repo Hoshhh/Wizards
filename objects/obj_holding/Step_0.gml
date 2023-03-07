@@ -29,9 +29,10 @@ yy = yy*cs;
 
 #region Placeable objects
 
-var _col = collision_rectangle(xx, yy, xx+cs-1, yy+cs-1, all, false, false);
+var _colChest = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
+var _colFurnace = collision_rectangle(xx-8,yy-cs,xx+(cs*2)-9,yy+cs-1, all, false, false);
 
-if (_col == noone and item_num == item.chest) {
+if (_colChest == noone and item_num == item.chest) {
 	color = c_green;
 	if (mouse_check_button_pressed(mb_left)) {
 		with(oInventory) {
@@ -44,6 +45,24 @@ if (_col == noone and item_num == item.chest) {
 			
 			with(instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", oChest)) {
 				 instance_create_layer(x, y, "Instances", obj_chest)	
+			}
+			
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+} else if (_colFurnace == noone and item_num == item.furnace) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			with(instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", oFurnace)) {
+				 instance_create_layer(x, y, "Instances", obj_furnace)	
 			}
 			
 			inventory[bar_selected_slot].amount -= 1;

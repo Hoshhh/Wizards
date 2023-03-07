@@ -13,6 +13,7 @@ selected = false;
 show_selected = false;
 instance = id;
 
+/*
 // Setup:
 sys_particle = part_system_create()
 part_system_layer(sys_particle, layer)
@@ -31,7 +32,7 @@ part_type_blend(part_particle, 0)
 part_type_life(part_particle, 85, 95)
 emit_particle = part_emitter_create(sys_particle)
 
-alarm[0] = 30
+alarm[0] = 30*/
 
 
 enum treestates {

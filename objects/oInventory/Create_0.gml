@@ -123,9 +123,16 @@ enum item {
 	purpleberry				= 43,
 	redberry				= 44,
 	chest					= 45,
-	wood					= 46,
-	stone					= 47,
-	height					= 48,
+	furnace					= 46,
+	wood					= 47,
+	stone					= 48,
+	copperore				= 49,
+	copperbar				= 50,
+	ironore					= 51,
+	ironbar					= 52,
+	goldore					= 53,
+	goldbar					= 55,
+	height					= 56,
 }
 
 #region Item Info Array
@@ -362,12 +369,47 @@ item_info[45] = {
 }
 
 item_info[46] = {
-	iname : "Wood",
+	iname : "Furnace",
 	quality : 1,
 }
 
 item_info[47] = {
+	iname : "Wood",
+	quality : 1,
+}
+
+item_info[48] = {
 	iname : "Stone",
+	quality : 1,
+}
+
+item_info[49] = {
+	iname : "Copper Ore",
+	quality : 1,
+}
+
+item_info[50] = {
+	iname : "Copper Bar",
+	quality : 1,
+}
+
+item_info[51] = {
+	iname : "Iron Ore",
+	quality : 1,
+}
+
+item_info[52] = {
+	iname : "Iron Bar",
+	quality : 1,
+}
+
+item_info[53] = {
+	iname : "Gold Ore",
+	quality : 1,
+}
+
+item_info[50] = {
+	iname : "Gold Bar",
 	quality : 1,
 }
 
@@ -376,23 +418,23 @@ item_info[47] = {
 inventory = array_create(INVENTORY_SLOTS, -1)
 
 inventory[0] = {
-	itemInSlot	: item.centaury,
+	itemInSlot	: item.copperore,
 	amount		: 100,
-	iname		: "Centaury",
+	iname		: "Copper Ore",
 	quality		: 1
 }
 
 inventory[1] = {
-	itemInSlot	: item.PinkPotion,
+	itemInSlot	: item.ironore,
 	amount		: 100,
-	iname		: "Pink Potion",
+	iname		: "Iron Ore",
 	quality		: 1
 }
 
 inventory[2] = {
-	itemInSlot	: item.BluePotion,
+	itemInSlot	: item.goldore,
 	amount		: 100,
-	iname		: "Blue Potion",
+	iname		: "Gold Ore",
 	quality		: 1
 }
 
@@ -403,7 +445,14 @@ inventory[3] = {
 	quality		: 1
 }
 
-var yy = 4; repeat(INVENTORY_SLOTS)
+inventory[4] = {
+	itemInSlot	: item.furnace,
+	amount		: 10,
+	iname		: "Furnace",
+	quality		: 1
+}
+
+var yy = 5; repeat(INVENTORY_SLOTS)
 {
 		inventory[yy] = {
 			itemInSlot	: item.none,
