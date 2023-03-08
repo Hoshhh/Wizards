@@ -408,7 +408,7 @@ item_info[53] = {
 	quality : 1,
 }
 
-item_info[50] = {
+item_info[54] = {
 	iname : "Gold Bar",
 	quality : 1,
 }

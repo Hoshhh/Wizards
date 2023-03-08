@@ -89,7 +89,7 @@ draw_text_color(10,230, "chest buttons_selected: " + string(oChest.button), c,c,
 
 for (var j = 0; j < INVENTORY_SLOTS; j++) {
 	var ydist = 20
-	draw_text_color(300,ydist*j + 10, string(inventory[j]) + "\n", c,c,c,c, 1);
+	draw_text_color(300,ydist*j + 80, string(inventory[j]) + "\n", c,c,c,c, 1);
 }
 
 

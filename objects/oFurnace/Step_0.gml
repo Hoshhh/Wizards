@@ -1,5 +1,4 @@
 if (show_furn) {
-
 	mousex = device_mouse_x_to_gui(0);
 	mousey = device_mouse_y_to_gui(0);
 
@@ -55,10 +54,12 @@ if (show_furn) {
 	if (selected_slot = 1 and inventory[1].itemInSlot != item.none) {
 		if (mouse_check_button_pressed(mb_left)) {
 			var didAdd = InventoryAdd(oInventory, inventory[1].itemInSlot, inventory[1].amount)
-			InventorySortByQuality(oInventory.inventory);
+			//InventorySortByQuality(oInventory.inventory);
 			if (didAdd) {
 				inventory[1].itemInSlot = item.none;
 				inventory[1].amount = 0;
+				inventory[1].iname = "";
+				inventory[1].quality = 0;
 			}
 		}
 	}

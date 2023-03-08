@@ -62,10 +62,15 @@ function InventoryStack(rootObject, itemType, _slotFrom, _slotTo) {
 }
 
 function InventoryToOtherStack(objectFrom, slotFrom, objectTo, slotTo) {
-	objectFrom.inventory[slotFrom].itemInSlot = -1;
+	objectTo.inventory[slotTo].itemInSlot = objectFrom.inventory[slotFrom].itemInSlot;
 	objectTo.inventory[slotTo].amount += objectFrom.inventory[slotFrom].amount;
+	objectTo.inventory[slotTo].iname = objectFrom.inventory[slotFrom].iname;
+	objectTo.inventory[slotTo].quality = objectFrom.inventory[slotFrom].quality;
 	
+	objectFrom.inventory[slotFrom].itemInSlot = -1;
 	objectFrom.inventory[slotFrom].amount = 0;
+	objectFrom.inventory[slotFrom].iname = "";
+	objectFrom.inventory[slotFrom].quality = 0;
 }
 
 function InventoryMoveAll(objectFrom, objectTo) {

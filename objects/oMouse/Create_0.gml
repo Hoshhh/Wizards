@@ -108,7 +108,6 @@ stateFree = function() {
 stateDrag = function() {
 	mouseOver()
 	if (global.input_select) {
-		
 		var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
 		if (inventoryHover == _furnace) {
 			if (slotHover == 1) {
@@ -116,9 +115,10 @@ stateDrag = function() {
 				slotHover = -1;
 			}
 		}
-		
+			
 		//Swap with slot hovering
 		if (slotHover != -1) {
+			
 			if (itemDrag != inventoryHover.inventory[slotHover].itemInSlot) {
 				InventorySwap(inventoryDrag, slotDrag, inventoryHover, slotHover)
 			} else if (itemDrag == inventoryHover.inventory[slotHover].itemInSlot and inventoryDrag == inventoryHover) {
