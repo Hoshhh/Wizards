@@ -8,6 +8,7 @@
     {"name":"Particles","order":2,"path":"folders/Particles.yy",},
     {"name":"Furnace","order":1,"path":"folders/Sprites/Placeables/Furnace.yy",},
     {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
+    {"name":"Crafting","order":9,"path":"folders/Scripts/Crafting.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_run","order":1,"path":"sprites/spr_run/spr_run.yy",},

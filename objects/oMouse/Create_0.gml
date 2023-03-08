@@ -51,7 +51,7 @@ stateFree = function() {
 	
 	var _chest = instance_nearest(obj_player.x, obj_player.y, oChest);
 	//Start to drag an item if slot is not empty
-	if ((global.input_select) and (slotHover != -1) and (inventoryHover.inventory[slotHover].itemInSlot != -1)) {
+	if ((global.input_select) and (slotHover != -1) and (inventoryHover.inventory[slotHover].itemInSlot != -1) and (inventoryHover.inventory[slotHover].amount != 0)) {
 		//Enter drag state
 		state = stateDrag;
 		itemDrag = inventoryHover.inventory[slotHover].itemInSlot;

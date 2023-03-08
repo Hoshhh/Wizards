@@ -9,7 +9,7 @@ for (var j = 0; j < furn_slots; j++) {
 	draw_text_color(300,ydist*j + 10, string(inventory[j]) + "\n", c,c,c,c, 1);
 }
 
-draw_text_color(10,5, "testx: " + string(testx), c,c,c,c, 1);
+draw_text_color(10,5, "testx: " + string(selected_slot), c,c,c,c, 1);
 draw_text_color(10,15, "testy: " + string(testy), c,c,c,c, 1);
 
 draw_sprite_part_ext(

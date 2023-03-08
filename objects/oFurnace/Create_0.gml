@@ -16,6 +16,8 @@ selected_slot = 0;
 m_slotx = 0;
 m_sloty = 0;
 
+crafting_timer = 0;
+crafted = false;
 
 x_buffer = 1;
 y_buffer = 9;
@@ -82,20 +84,20 @@ ore_recipes = array_create(2, -1)
 ore_recipes[0] = {
 	output_type	: item.copperbar,
 	output_amount	: 1,
-	item1_type		: item.copperore,
-	item1_amount	: 5,
+	ore_type		: item.copperore,
+	ore_amount		: 5,
 }
 
 ore_recipes[1] = {
 	output_type	: item.ironbar,
 	output_amount	: 1,
-	item1_type		: item.ironore,
-	item1_amount	: 5,
+	ore_type		: item.ironore,
+	ore_amount		: 5,
 }
 
 ore_recipes[2] = {
 	output_type	: item.goldbar,
 	output_amount	: 1,
-	item1_type		: item.goldore,
-	item1_amount	: 5,
+	ore_type		: item.goldore,
+	ore_amount		: 5,
 }
