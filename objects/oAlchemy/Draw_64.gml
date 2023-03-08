@@ -3,8 +3,8 @@ draw_set_font(fnt_smalldigits);
 
 if (!show_alch) exit;
 
-draw_text_color(10,5, "add_x: " + string(testx), c,c,c,c, 1);
-draw_text_color(10,15, "add_y: " + string(testy), c,c,c,c, 1);
+//draw_text_color(10,5, "add_x: " + string(testx), c,c,c,c, 1);
+//draw_text_color(10,15, "add_y: " + string(testy), c,c,c,c, 1);
 
 draw_sprite_part_ext(
 	spr_alch_ui, 0, 0, 0, alch_ui_width, alch_ui_height, 

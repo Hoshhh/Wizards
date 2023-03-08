@@ -15,6 +15,7 @@ mouseOver = function() {
 	inventoryHover = -1;
 	
 	var _chest = instance_nearest(obj_player.x, obj_player.y, oChest);
+	var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
 	
 	//Check for inventory slot hover
 	with(oInventory) {
@@ -34,6 +35,14 @@ mouseOver = function() {
 		} else if (buttons_selected) {
 			other.inventoryHover = id;	
 		}
+	}
+	
+	//Check for furnace slot hover
+	with(_furnace) {
+		if ((mouse_in_furn || mouse_in_output) and show_furn) {
+			other.slotHover = selected_slot;
+			other.inventoryHover = id;
+		} 
 	}
 }
 
@@ -78,8 +87,10 @@ stateFree = function() {
 			InventorySortByQuality(other.inventoryHover.inventory);	
 		}
 		
-		if ((button == 1) and (global.input_select) and (_chest.show_chest == true)) {
-			InventoryMoveAll(other.inventoryHover, _chest);	
+		if (instance_exists(_chest)) {
+			if ((button == 1) and (global.input_select) and (_chest.show_chest == true)) {
+				InventoryMoveAll(other.inventoryHover, _chest);	
+			}
 		}
 	}
 	
@@ -97,6 +108,15 @@ stateFree = function() {
 stateDrag = function() {
 	mouseOver()
 	if (global.input_select) {
+		
+		var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
+		if (inventoryHover == _furnace) {
+			if (slotHover == 1) {
+				inventoryDrag.inventory[slotDrag].itemInSlot = itemDrag;
+				slotHover = -1;
+			}
+		}
+		
 		//Swap with slot hovering
 		if (slotHover != -1) {
 			if (itemDrag != inventoryHover.inventory[slotHover].itemInSlot) {

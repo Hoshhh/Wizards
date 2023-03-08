@@ -1,13 +1,13 @@
 {
   "FolderOrderSettings": [
-    {"name":"Decorations","order":1,"path":"folders/Objects/Interactables/Placeables/Decorations.yy",},
     {"name":"Trees","order":1,"path":"folders/Objects/Interactables/Harvestables/Trees.yy",},
-    {"name":"Particles","order":2,"path":"folders/Particles.yy",},
-    {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
-    {"name":"Furnace","order":1,"path":"folders/Sprites/Placeables/Furnace.yy",},
     {"name":"Placeables","order":3,"path":"folders/Objects/Interactables/Placeables.yy",},
-    {"name":"Chests","order":2,"path":"folders/Objects/Interactables/Placeables/Chests.yy",},
     {"name":"Alchemy","order":3,"path":"folders/Objects/Interactables/Placeables/Alchemy.yy",},
+    {"name":"Chests","order":2,"path":"folders/Objects/Interactables/Placeables/Chests.yy",},
+    {"name":"Decorations","order":1,"path":"folders/Objects/Interactables/Placeables/Decorations.yy",},
+    {"name":"Particles","order":2,"path":"folders/Particles.yy",},
+    {"name":"Furnace","order":1,"path":"folders/Sprites/Placeables/Furnace.yy",},
+    {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_run","order":1,"path":"sprites/spr_run/spr_run.yy",},

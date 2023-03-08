@@ -11,10 +11,8 @@ if (show_alch) {
 	var i_mousex = mousex - slots_x;
 	var i_mousey = mousey - slots_y;
 
-
 	var nx = i_mousex div cell_xbuffer;
 	var ny = i_mousey div cell_ybuffer;
-
 
 	mouse_in_alch = true;
 	var mouse_in_output = false;
