@@ -46,4 +46,15 @@ if (show_furn) {
 			}
 		}
 	}
+	
+	//Remove item queue when there's nothing in the furnace to smelt
+	if (inventory[0].itemInSlot == item.none) {
+		crafting_timer = 0;
+		if (inventory[1].amount <= 0) {
+			inventory[1].itemInSlot = item.none;
+			inventory[1].amount = 0;
+			inventory[1].iname = "";
+			inventory[1].quality = 0;
+		}
+	}
 }

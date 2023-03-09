@@ -184,6 +184,7 @@
     {"id":{"name":"daycycle","path":"objects/daycycle/daycycle.yy",},},
     {"id":{"name":"create_box","path":"scripts/create_box/create_box.yy",},},
     {"id":{"name":"spr_shelf03","path":"sprites/spr_shelf03/spr_shelf03.yy",},},
+    {"id":{"name":"BuildChest","path":"scripts/BuildChest/BuildChest.yy",},},
     {"id":{"name":"spr_arrow_left","path":"sprites/spr_arrow_left/spr_arrow_left.yy",},},
     {"id":{"name":"obj_greenpotion","path":"objects/obj_greenpotion/obj_greenpotion.yy",},},
     {"id":{"name":"par_tree","path":"objects/par_tree/par_tree.yy",},},
@@ -224,6 +225,7 @@
     {"id":{"name":"sq_planting","path":"sequences/sq_planting/sq_planting.yy",},},
     {"id":{"name":"depthsorter","path":"objects/depthsorter/depthsorter.yy",},},
     {"id":{"name":"spr_painting","path":"sprites/spr_painting/spr_painting.yy",},},
+    {"id":{"name":"BuildFurnace","path":"scripts/BuildFurnace/BuildFurnace.yy",},},
     {"id":{"name":"spr_table","path":"sprites/spr_table/spr_table.yy",},},
     {"id":{"name":"string_wrap","path":"scripts/string_wrap/string_wrap.yy",},},
     {"id":{"name":"sh_red","path":"shaders/sh_red/sh_red.yy",},},
@@ -301,8 +303,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"init","path":"rooms/init/init.yy",},},
     {"roomId":{"name":"rm_creator","path":"rooms/rm_creator/rm_creator.yy",},},
-    {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
     {"roomId":{"name":"rm_alchemy","path":"rooms/rm_alchemy/rm_alchemy.yy",},},
+    {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
     {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
   ],
   "TextureGroups": [

@@ -21,9 +21,12 @@ function FindOre(item1, rootObject){
 			}
 			
 			//If crafting timer completes, update the amounts of each item
-			if (crafting_timer >= 16) {
+			if (crafting_timer >= 32) {
 				crafted = true;
+				rootObject.inventory[1].itemInSlot = rootObject.ore_recipes[i].output_type;
 				rootObject.inventory[1].amount += rootObject.ore_recipes[i].output_amount;
+				rootObject.inventory[1].iname = rootObject.ore_recipes[i].iname;
+				rootObject.inventory[1].quality = rootObject.ore_recipes[i].quality;
 	
 				if (rootObject.inventory[0].itemInSlot != item.none) {
 					rootObject.inventory[0].amount -= rootObject.ore_recipes[i].ore_amount; //amounts

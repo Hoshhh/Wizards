@@ -66,7 +66,23 @@ for (var i = 0; i < furn_slots; i++) {
 		draw_text_transformed_color(xx + (8*scale), yy + (12*scale), string(number), 0.2*scale, 0.2*scale, 0, c,c,c,c, 1);
 	}
 	
+	draw_sprite_part_ext(spr_furn_ui, 0, 18, 12, cell_size, (0+crafting_timer/2),output_x,output_y,scale,scale,c_red,1);
+	
 	if (oitem > 0) {
+		
+		if (crafting_timer <= 32) { 
+			draw_sprite_part_ext(spr_furn_items, 0,ox,oy,cell_size, cell_size, 
+			output_x,output_y, scale, scale, c_white, 0.3
+			);
+		}
+		
+		if (inventory[1].amount != 0) {
+			draw_sprite_part_ext(
+			spr_furn_items, 0,ox,oy,cell_size, cell_size, 
+			output_x,output_y, scale, scale, c_white, 1
+			);	
+		}
+	
 		if (inventory[1].itemInSlot != item.none) {
 			if (mouse_in_output) {
 				draw_sprite_ext(spr_inventory_selected,0, output_select_x, output_select_y, scale, scale, 0, c_white, 1);
@@ -74,14 +90,9 @@ for (var i = 0; i < furn_slots; i++) {
 			
 			var number = inventory[1].amount;
 			var c = c_white;
-		
-			draw_sprite_part_ext(
-			spr_furn_items, 0,ox,oy,cell_size, cell_size, 
-			output_x,output_y, scale, scale, c_white, 1
-			);
-		
 			draw_text_transformed_color(output_x + (8*scale), output_y + (12*scale), string(number), 0.2*scale, 0.2*scale, 0, c,c,c,c, 1);
 		}
+		
 	}
 }
 

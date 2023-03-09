@@ -131,8 +131,8 @@ enum item {
 	ironore					= 51,
 	ironbar					= 52,
 	goldore					= 53,
-	goldbar					= 55,
-	height					= 56,
+	goldbar					= 54,
+	height					= 55,
 }
 
 #region Item Info Array

@@ -29,9 +29,23 @@ yy = yy*cs;
 
 #region Placeable objects
 
-var _colChest = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
-var _colFurnace = collision_rectangle(xx-8,yy-cs,xx+(cs*2)-9,yy+cs-1, all, false, false);
+var _col32 = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
+var _colFurnace = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
 
+if (_col32 == noone) {
+	switch(item_num) {
+		case item.chest	:
+			BuildChest()
+		break;
+		
+		case item.furnace :
+			BuildFurnace()
+		break;
+	}
+} else { color = c_red }
+
+
+/*
 if (_colChest == noone and item_num == item.chest) {
 	color = c_green;
 	if (mouse_check_button_pressed(mb_left)) {
@@ -68,6 +82,6 @@ if (_colChest == noone and item_num == item.chest) {
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
-} else { color = c_red }
+} else { color = c_red }*/
 
 #endregion

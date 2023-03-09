@@ -11,7 +11,7 @@ mouse_in_output = false;
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);
 
-show_furn = true;
+show_furn = false;
 selected_slot = 0;
 m_slotx = 0;
 m_sloty = 0;
@@ -53,7 +53,7 @@ testy = 0;
 
 inventory = array_create(furn_slots, -1)
 
-var yy = 1; repeat(furn_slots)
+var yy = 0; repeat(furn_slots)
 {
 		inventory[yy] = {
 			itemInSlot	: item.none,
@@ -65,27 +65,14 @@ var yy = 1; repeat(furn_slots)
 }
 
 
-inventory[0] = {
-	itemInSlot	: item.copperore,
-	amount		: 100,
-	iname		: "Copper Ore",
-	quality		: 1
-}
-
-inventory[1] = {
-	itemInSlot	: item.copperbar,
-	amount		: 1,
-	iname		: "Copper Bar",
-	quality		: 0
-}
-
-
 ore_recipes = array_create(2, -1)
 ore_recipes[0] = {
 	output_type	: item.copperbar,
 	output_amount	: 1,
 	ore_type		: item.copperore,
 	ore_amount		: 5,
+	iname			: "Copper Bar",
+	quality			: 1
 }
 
 ore_recipes[1] = {
@@ -93,6 +80,8 @@ ore_recipes[1] = {
 	output_amount	: 1,
 	ore_type		: item.ironore,
 	ore_amount		: 5,
+	iname			: "Iron Bar",
+	quality			: 1
 }
 
 ore_recipes[2] = {
@@ -100,4 +89,6 @@ ore_recipes[2] = {
 	output_amount	: 1,
 	ore_type		: item.goldore,
 	ore_amount		: 5,
+	iname			: "Gold Bar",
+	quality			: 1
 }
