@@ -93,3 +93,5 @@ ore_recipes[2] = {
 	iname			: "Gold Bar",
 	quality			: 1
 }
+
+instance_create_layer(x, y, "Instances", obj_furnace)

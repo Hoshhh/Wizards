@@ -1,14 +1,16 @@
 //Room saving 
 function SaveRoom() {
-	var _treeNum = instance_number(par_tree);
 	var _alchTableNum = instance_number(obj_alchemy_table);
 	var _chestNum = instance_number(obj_chest);
+	var _furnNum = instance_number(obj_furnace);
 	
 	var _roomStruct = {
 		alchNum		: _alchTableNum,
 		alchData	: array_create(_alchTableNum),
 		chestNum	: _chestNum,
 		chestData	: array_create(_chestNum),
+		furnNum		: _furnNum,
+		furnData	: array_create(_furnNum),
 		
 	}
 	
@@ -34,6 +36,16 @@ function SaveRoom() {
 		}
 	}
 	
+	//Furnaces
+	for (var i = 0; i < _chestNum; i++) {
+		var _inst = instance_find(obj_furnace, i);
+		
+		_roomStruct.furnData[i] = {
+			x : _inst.x,
+			y : _inst.y
+		}
+	}
+	
 	//Store the struct in the global.level
 	if (room == rm_main) { global.levelData.levelMain		= _roomStruct; }
 	if (room == rm_alchemy) { global.levelData.levelAlchemy	= _roomStruct; }
@@ -53,6 +65,7 @@ function LoadRoom() {
 	//Rocks - get rid of the default room editior objects, then create new ones
 	if (instance_exists(obj_alchemy_table)) { instance_destroy(obj_alchemy_table) }
 	if (instance_exists(obj_chest)) { instance_destroy(obj_chest) }
+	if (instance_exists(obj_furnace)) { instance_destroy(obj_furnace) }
 	
 	
 	for (var i = 0; i < _roomStruct.alchNum; i++) {
@@ -61,6 +74,10 @@ function LoadRoom() {
 	
 	for (var i = 0; i < _roomStruct.chestNum; i++) {
 		instance_create_layer(_roomStruct.chestData[i].x, _roomStruct.chestData[i].y, "Instances", obj_chest)
+	}
+	
+	for (var i = 0; i < _roomStruct.furnNum; i++) {
+		instance_create_layer(_roomStruct.furnData[i].x, _roomStruct.furnData[i].y, "Instances", obj_furnace)
 	}
 }
 	
@@ -76,6 +93,13 @@ function SaveGame(_fileNum = 0) {
 	var _dataStruct = {
 		chestInvNum	: _chestInvNum,
 		chestInvData	: array_create(_chestInvNum),
+	}
+	
+	//Furnaces
+	var _furnInvNum = instance_number(oFurnace);
+	var _furnStruct = {
+		furnInvNum	: _furnInvNum,
+		furnInvData	: array_create(_furnInvNum),
 	}
 	
 	//crops obj
@@ -107,6 +131,16 @@ function SaveGame(_fileNum = 0) {
 		}
 	}
 	
+	//Furnace
+	for (var i = 0; i < _furnInvNum; i++) {
+		var _inst = instance_find(oFurnace, i);
+		_furnStruct.furnInvData[i] = {
+			x : _inst.x,
+			y : _inst.y,
+			inventory : _inst.inventory
+		}
+	}
+	
 	//Crops
 	for (var i = 0; i < _cropDataNum; i++) {
 		var _inst = instance_find(crops, i);
@@ -131,6 +165,7 @@ function SaveGame(_fileNum = 0) {
 	
 	
 	global.statData.chest_inv = _dataStruct
+	global.statData.furnace_inv = _furnStruct
 	global.statData.crop_data = _cropsStruct
 	global.statData.alchemy_data = _alchemyStruct
 	array_push(_saveArray, global.statData)
@@ -172,6 +207,14 @@ function LoadGame(_fileNum = 0) {
 	for (var i = 0; i < _chestData.chestInvNum; i++) {
 		with(instance_create_layer(_chestData.chestInvData[i].x, _chestData.chestInvData[i].y, "Instances", oChest)) {
 			inventory = _chestData.chestInvData[i].inventory;
+		}
+	}
+	
+	//Load furnaces
+	var _furnData = global.statData.furnace_inv
+	for (var i = 0; i < _furnData.furnInvNum; i++) {
+		with(instance_create_layer(_furnData.furnInvData[i].x, _furnData.furnInvData[i].y, "Instances", oFurnace)) {
+			inventory = _furnData.furnInvData[i].inventory;
 		}
 	}
 	

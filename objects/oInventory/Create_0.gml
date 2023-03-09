@@ -417,7 +417,7 @@ item_info[45] = {
 item_info[46] = {
 	iname : "Furnace",
 	quality : 1,
-	obj : obj_furnace
+	obj : oFurnace
 }
 
 item_info[47] = {
@@ -509,7 +509,7 @@ inventory[4] = {
 	amount		: 10,
 	iname		: "Furnace",
 	quality		: 1,
-	obj			: obj_furnace
+	obj			: oFurnace
 }
 
 var yy = 5; repeat(INVENTORY_SLOTS)

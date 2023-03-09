@@ -6,6 +6,7 @@ global.savefile = -1;
 global.statData = 
 {
 	chest_inv		: 0,
+	furnace_inv		: 0,
 	crop_data		: 0,
 	alchemy_data	: 0,
 }
