@@ -7,6 +7,8 @@ if (instance_exists(obj_cutscene)) exit;
 var inv = inventory;
 var tb_item = inv[bar_selected_slot].itemInSlot
 var num = inv[bar_selected_slot].amount;
+var _obj = inv[bar_selected_slot].obj;
+
 
 #region selecting
 
@@ -23,6 +25,7 @@ if (keyboard_check_pressed(ord("1")))
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}
@@ -40,6 +43,7 @@ if (keyboard_check_pressed(ord("2"))) {
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}
@@ -56,6 +60,7 @@ if (keyboard_check_pressed(ord("3"))){
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}
@@ -73,6 +78,7 @@ if (keyboard_check_pressed(ord("4")))
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}
@@ -90,6 +96,7 @@ if (keyboard_check_pressed(ord("5")))
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}
@@ -107,6 +114,7 @@ if (keyboard_check_pressed(ord("6")))
 		with(inst) {
 			item_num = tb_item; 
 			stack_num = num; //1
+			obj = _obj;
 			x_frame = item_num mod (spr_width/cell_size);
 			y_frame = item_num div (spr_width/cell_size);	
 		}

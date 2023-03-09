@@ -59,7 +59,8 @@ var yy = 0; repeat(furn_slots)
 			itemInSlot	: item.none,
 			amount		: 0,
 			iname		: "",
-			quality		: 0
+			quality		: 0,
+			obj			: noone
 		}
 		yy += 1;
 }

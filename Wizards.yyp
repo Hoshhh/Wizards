@@ -275,6 +275,7 @@
     {"id":{"name":"spr_crystalball","path":"sprites/spr_crystalball/spr_crystalball.yy",},},
     {"id":{"name":"obj_tree_base","path":"objects/obj_tree_base/obj_tree_base.yy",},},
     {"id":{"name":"obj_oldman2","path":"objects/obj_oldman2/obj_oldman2.yy",},},
+    {"id":{"name":"BuildObject","path":"scripts/BuildObject/BuildObject.yy",},},
     {"id":{"name":"spr_player_customizer","path":"sprites/spr_player_customizer/spr_player_customizer.yy",},},
     {"id":{"name":"cutscene_instance_create","path":"scripts/cutscene_instance_create/cutscene_instance_create.yy",},},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
@@ -303,8 +304,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"init","path":"rooms/init/init.yy",},},
     {"roomId":{"name":"rm_creator","path":"rooms/rm_creator/rm_creator.yy",},},
-    {"roomId":{"name":"rm_alchemy","path":"rooms/rm_alchemy/rm_alchemy.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"roomId":{"name":"rm_alchemy","path":"rooms/rm_alchemy/rm_alchemy.yy",},},
     {"roomId":{"name":"rm_testing","path":"rooms/rm_testing/rm_testing.yy",},},
   ],
   "TextureGroups": [

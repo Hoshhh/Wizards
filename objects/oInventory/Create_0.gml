@@ -141,276 +141,331 @@ item_info = array_create(item.height)
 item_info[0] = {
 	iname : "Nothing",
 	quality : 0,
+	obj : noone
 }
 
 item_info[1] = {
 	iname : "Unknown",
 	quality : 0,
+	obj : noone
 }
 
 item_info[2] = {
 	iname : "Red Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[3] = {
 	iname : "Yellow Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[4] = {
 	iname : "Blue Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[5] = {
 	iname : "Orange Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[6] = {
 	iname : "Green Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[7] = {
 	iname : "Purple Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[8] = {
 	iname : "Navy Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[9] = {
 	iname : "Pink Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[10] = {
 	iname : "Black Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[11] = {
 	iname : "Dark Green Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[12] = {
 	iname : "Dark Red Potion",
 	quality : 1,
+	obj : noone
 }
 
 item_info[13] = {
 	iname : "Large Red Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[14] = {
 	iname : "Large Yellow Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[15] = {
 	iname : "Large Blue Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[16] = {
 	iname : "Large Orange Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[17] = {
 	iname : "Large Green Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[18] = {
 	iname : "Large Purple Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[19] = {
 	iname : "Large Navy Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[20] = {
 	iname : "Large Pink Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[21] = {
 	iname : "Large Black Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[22] = {
 	iname : "Large Dark Green Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[23] = {
 	iname : "Large Dark Red Potion",
 	quality : 2,
+	obj : noone
 }
 
 item_info[24] = {
 	iname : "Centaury",
 	quality : 1,
+	obj : noone
 }
 
 item_info[25] = {
 	iname : "Wolfsbane",
 	quality : 1,
+	obj : noone
 }
 
 item_info[26] = {
 	iname : "Centaury Seeds",
 	quality : 1,
+	obj : noone
 }
 
 item_info[27] = {
 	iname : "Wolfsbane Seeds",
 	quality : 1,
+	obj : noone
 }
 
 item_info[28] = {
 	iname : "Purple Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[29] = {
 	iname : "Yellow Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[30] = {
 	iname : "Orange Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[31] = {
 	iname : "Light Green Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[32] = {
 	iname : "Cyan Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[33] = {
 	iname : "Grey Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[34] = {
 	iname : "White Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[35] = {
 	iname : "Pink Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[36] = {
 	iname : "Red Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[37] = {
 	iname : "Brown Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[38] = {
 	iname : "Pale Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[39] = {
 	iname : "Green Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[40] = {
 	iname : "Blue Mushroom",
 	quality : 1,
+	obj : noone
 }
 
 item_info[41] = {
 	iname : "Blue Berry",
 	quality : 1,
+	obj : noone
 }
 
 item_info[42] = {
 	iname : "Green Berry",
 	quality : 1,
+	obj : noone
 }
 
 item_info[43] = {
 	iname : "Purple Berry",
 	quality : 1,
+	obj : noone
 }
 
 item_info[44] = {
 	iname : "Red Berry",
 	quality : 1,
+	obj : noone
 }
 
 item_info[45] = {
 	iname : "Chest",
 	quality : 1,
+	obj	: oChest
 }
 
 item_info[46] = {
 	iname : "Furnace",
 	quality : 1,
+	obj : obj_furnace
 }
 
 item_info[47] = {
 	iname : "Wood",
 	quality : 1,
+	obj : noone
 }
 
 item_info[48] = {
 	iname : "Stone",
 	quality : 1,
+	obj : noone
 }
 
 item_info[49] = {
 	iname : "Copper Ore",
 	quality : 1,
+	obj : noone
 }
 
 item_info[50] = {
 	iname : "Copper Bar",
 	quality : 1,
+	obj : noone
 }
 
 item_info[51] = {
 	iname : "Iron Ore",
 	quality : 1,
+	obj : noone
 }
 
 item_info[52] = {
 	iname : "Iron Bar",
 	quality : 1,
+	obj : noone
 }
 
 item_info[53] = {
 	iname : "Gold Ore",
 	quality : 1,
+	obj : noone
 }
 
 item_info[54] = {
 	iname : "Gold Bar",
 	quality : 1,
+	obj : noone
 }
 
 #endregion
@@ -421,35 +476,40 @@ inventory[0] = {
 	itemInSlot	: item.copperore,
 	amount		: 100,
 	iname		: "Copper Ore",
-	quality		: 1
+	quality		: 1,
+	obj			: noone
 }
 
 inventory[1] = {
 	itemInSlot	: item.ironore,
 	amount		: 100,
 	iname		: "Iron Ore",
-	quality		: 1
+	quality		: 1,
+	obj			: noone
 }
 
 inventory[2] = {
 	itemInSlot	: item.goldore,
 	amount		: 100,
 	iname		: "Gold Ore",
-	quality		: 1
+	quality		: 1,
+	obj			: noone
 }
 
 inventory[3] = {
 	itemInSlot	: item.chest,
 	amount		: 10,
 	iname		: "Chest",
-	quality		: 1
+	quality		: 1,
+	obj			: oChest
 }
 
 inventory[4] = {
 	itemInSlot	: item.furnace,
 	amount		: 10,
 	iname		: "Furnace",
-	quality		: 1
+	quality		: 1,
+	obj			: obj_furnace
 }
 
 var yy = 5; repeat(INVENTORY_SLOTS)
@@ -458,7 +518,8 @@ var yy = 5; repeat(INVENTORY_SLOTS)
 			itemInSlot	: item.none,
 			amount		: 0,
 			iname		: "",
-			quality		: 0
+			quality		: 0,
+			obj			: noone
 		}
 		yy += 1;
 }

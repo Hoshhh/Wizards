@@ -15,3 +15,5 @@ y_offset = cell_size * (2/3);
 mx = mouse_x;
 my = mouse_y;
 color = c_red;
+
+obj = -1;

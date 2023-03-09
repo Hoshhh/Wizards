@@ -145,6 +145,7 @@
     {"name":"obj_create_button","order":3,"path":"objects/obj_create_button/obj_create_button.yy",},
     {"name":"spr_crystalball","order":4,"path":"sprites/spr_crystalball/spr_crystalball.yy",},
     {"name":"obj_oldman2","order":1,"path":"objects/obj_oldman2/obj_oldman2.yy",},
+    {"name":"BuildObject","order":3,"path":"scripts/BuildObject/BuildObject.yy",},
     {"name":"spr_player_customizer","order":2,"path":"sprites/spr_player_customizer/spr_player_customizer.yy",},
     {"name":"cutscene_instance_create","order":4,"path":"scripts/cutscene_instance_create/cutscene_instance_create.yy",},
     {"name":"spr_bg","order":4,"path":"sprites/spr_bg/spr_bg.yy",},

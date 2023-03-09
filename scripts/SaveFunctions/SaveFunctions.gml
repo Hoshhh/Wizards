@@ -35,7 +35,7 @@ function SaveRoom() {
 	}
 	
 	//Store the struct in the global.level
-	if (room == rm_testing) { global.levelData.levelTesting		= _roomStruct; }
+	if (room == rm_main) { global.levelData.levelMain		= _roomStruct; }
 	if (room == rm_alchemy) { global.levelData.levelAlchemy	= _roomStruct; }
 }
 	
@@ -44,7 +44,7 @@ function LoadRoom() {
 	var _roomStruct = 0;
 	
 	//Get the correct struct for the room you're in
-	if room == rm_testing		{ _roomStruct = global.levelData.levelTesting }
+	if room == rm_main		{ _roomStruct = global.levelData.levelMain }
 	if room == rm_alchemy		{ _roomStruct = global.levelData.levelAlchemy }
 	
 	//Exit if room struct isnt a struct

@@ -73,7 +73,10 @@ var yy = 0; repeat(CHEST_SLOTS)
 			itemInSlot	: item.none,
 			amount		: 0,
 			iname		: "",
-			quality		: 0
+			quality		: 0,
+			obj			: noone
 		}
 		yy += 1;
 }
+
+instance_create_layer(x, y, "Instances", obj_chest)

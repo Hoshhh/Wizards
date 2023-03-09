@@ -127,6 +127,7 @@ function player_free(){
 		}
 	}
 	
+	
 	if (instance_exists(active_textbox)) state = states.dialogue;
 	
 

@@ -50,6 +50,7 @@ stateFree = function() {
 	mouseOver()
 	
 	var _chest = instance_nearest(obj_player.x, obj_player.y, oChest);
+	var _furn = instance_nearest(obj_player.x, obj_player.y, oFurnace);
 	//Start to drag an item if slot is not empty
 	if ((global.input_select) and (slotHover != -1) and (inventoryHover.inventory[slotHover].itemInSlot != -1) and (inventoryHover.inventory[slotHover].amount != 0)) {
 		//Enter drag state
@@ -69,7 +70,7 @@ stateFree = function() {
 					exit;
 				}
 			}
-		} else if (inventoryHover.object_index == _chest.object_index) {
+		} else if (instance_exists(_chest) and inventoryHover.object_index == _chest.object_index) {
 			for (var i = 0; i < CHEST_SLOTS; i++) {
 				if (inventoryHover.inventory[i].itemInSlot == item.none) {
 					InventoryAdd(inventoryHover, inventoryHover.inventory[slotHover].itemInSlot, floor(inventoryHover.inventory[slotHover].amount/2))
@@ -77,6 +78,8 @@ stateFree = function() {
 					exit;
 				}
 			}
+		} else if (instance_exists(_furn) and inventoryHover.object_index == _furn.object_index) {
+			//Do nothing???
 		}
 	}
 

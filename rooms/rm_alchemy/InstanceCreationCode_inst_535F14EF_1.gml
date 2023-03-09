@@ -1,6 +1,6 @@
-targetRoom = rm_testing;
-targetX = 175;
-targetY = 395;
+targetRoom = rm_main;
+targetX = 925;
+targetY = 120;
 
 playerFacingBefore = dir.down;
-playerFacingAfter = dir.down;
+playerFacingAfter = dir.left;

@@ -12,7 +12,7 @@ global.statData =
 
 global.levelData = 
 {
-	levelTesting	: 0,
+	levelMain	: 0,
 	levelAlchemy	: 0,
 }
 

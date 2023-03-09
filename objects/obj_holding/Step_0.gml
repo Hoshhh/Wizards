@@ -35,11 +35,11 @@ var _colFurnace = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, f
 if (_col32 == noone) {
 	switch(item_num) {
 		case item.chest	:
-			BuildChest()
+			BuildObject(obj)
 		break;
 		
 		case item.furnace :
-			BuildFurnace()
+			BuildObject(obj)
 		break;
 	}
 } else { color = c_red }

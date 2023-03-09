@@ -1,3 +1,4 @@
+
 inst = instance_nearest(x,y, oChest)
 
 var _colliding = collision_line(x,y,x,y+10, obj_player, false, false) != noone
