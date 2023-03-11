@@ -121,8 +121,19 @@ stateDrag = function() {
 	mouseOver()
 	if (global.input_select) {
 		var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
+		var _shop = instance_nearest(obj_player.x, obj_player.y, oShopContainer);
+		
+		//Prevents adding anything to the output slot in furnaces
 		if (inventoryHover == _furnace) {
 			if (slotHover == 1) {
+				inventoryDrag.inventory[slotDrag].itemInSlot = itemDrag;
+				slotHover = -1;
+			}
+		}
+		
+		//Prevents adding items other than potions to the shop container
+		if (inventoryHover == _shop) {
+			if (itemDrag > item.LargeDarkRedPotion) {
 				inventoryDrag.inventory[slotDrag].itemInSlot = itemDrag;
 				slotHover = -1;
 			}
