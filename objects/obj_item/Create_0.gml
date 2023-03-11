@@ -14,8 +14,8 @@ x_offset = cell_size/2;
 y_offset = cell_size * (2/3);
 
 drop_move = true;
-var itemdir = irandom_range(0,259);
-var len = 5;
+var itemdir = irandom_range(0,359);
+var len = 8;
 goal_x = x + lengthdir_x(len, itemdir);
 goal_y = y + lengthdir_y(len, itemdir);
 

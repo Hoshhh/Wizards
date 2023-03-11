@@ -9,6 +9,8 @@
     {"name":"Furnace","order":1,"path":"folders/Sprites/Placeables/Furnace.yy",},
     {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
     {"name":"Crafting","order":9,"path":"folders/Scripts/Crafting.yy",},
+    {"name":"Shop","order":2,"path":"folders/Sprites/UI Elements/Shop.yy",},
+    {"name":"Shop","order":4,"path":"folders/Objects/Interactables/Placeables/Shop.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_run","order":1,"path":"sprites/spr_run/spr_run.yy",},
@@ -76,6 +78,7 @@
     {"name":"cutscene_play_sound","order":3,"path":"scripts/cutscene_play_sound/cutscene_play_sound.yy",},
     {"name":"create_cutscene","order":9,"path":"scripts/create_cutscene/create_cutscene.yy",},
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"spr_large_shop_ui","order":1,"path":"sprites/spr_large_shop_ui/spr_large_shop_ui.yy",},
     {"name":"spr_outside_tileset","order":2,"path":"sprites/spr_outside_tileset/spr_outside_tileset.yy",},
     {"name":"spr_inventory_selected","order":1,"path":"sprites/spr_inventory_selected/spr_inventory_selected.yy",},
     {"name":"spr_red_potion","order":1,"path":"sprites/spr_red_potion/spr_red_potion.yy",},
