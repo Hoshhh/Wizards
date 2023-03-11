@@ -1,4 +1,4 @@
-
+/*
 var c = c_yellow
 draw_set_font(fnt_sidebutton)
 draw_text_color(10,50, "Inventory Drag: " + string(inventoryDrag), c,c,c,c, 1);

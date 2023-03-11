@@ -37,7 +37,7 @@ function SaveRoom() {
 	}
 	
 	//Furnaces
-	for (var i = 0; i < _chestNum; i++) {
+	for (var i = 0; i < _furnNum; i++) {
 		var _inst = instance_find(obj_furnace, i);
 		
 		_roomStruct.furnData[i] = {

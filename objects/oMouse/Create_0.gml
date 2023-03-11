@@ -16,6 +16,7 @@ mouseOver = function() {
 	
 	var _chest = instance_nearest(obj_player.x, obj_player.y, oChest);
 	var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
+	var _shop = instance_nearest(obj_player.x, obj_player.y, oShopContainer);
 	
 	//Check for inventory slot hover
 	with(oInventory) {
@@ -40,6 +41,14 @@ mouseOver = function() {
 	//Check for furnace slot hover
 	with(_furnace) {
 		if ((mouse_in_furn || mouse_in_output) and show_furn) {
+			other.slotHover = selected_slot;
+			other.inventoryHover = id;
+		} 
+	}
+	
+	//Check for shop slot hover
+	with(_shop) {
+		if (mouse_in_shop and show_shop) {
 			other.slotHover = selected_slot;
 			other.inventoryHover = id;
 		} 

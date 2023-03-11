@@ -8,12 +8,13 @@ var c = color;
 xx = xx*cs;
 yy = yy*cs;
 
+/*
 if (obj != noone) {
 	draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
 	draw_sprite_ext(obj.sprite_index, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
-}
+}*/
 
-/*
+
 switch(item_num) {
 	case item.chest :
 		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);

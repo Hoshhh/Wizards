@@ -4,10 +4,11 @@ draw_set_font(fnt_smalldigits);
 
 if (!show_furn) exit;
 
+/*
 for (var j = 0; j < furn_slots; j++) {
 	var ydist = 20
 	draw_text_color(300,ydist*j + 10, string(inventory[j]) + "\n", c,c,c,c, 1);
-}
+}*/
 
 draw_text_color(10,5, "testx: " + string(selected_slot), c,c,c,c, 1);
 draw_text_color(10,15, "testy: " + string(testy), c,c,c,c, 1);
