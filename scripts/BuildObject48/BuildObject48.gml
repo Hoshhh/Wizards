@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function BuildObject(_obj, _item){
+function BuildObject48(_obj, _item){
 	color = c_green;
 	if (mouse_check_button_pressed(mb_left)) {
 		var cs = cell_size;
@@ -14,19 +14,6 @@ function BuildObject(_obj, _item){
 		
 		with(_inst) {
 			switch(_item) {
-				case item.smallshelf : 
-				case item.smallhortable :
-				case item.smallverttable :
-					_inst.shop_slots = 2;	
-					if (_item == item.smallshelf) {
-						instance_create_layer(x,y, "Instances", obj_shelf_small);
-					} else if (_item == item.smallhortable) {
-						instance_create_layer(x,y, "Instances", obj_horizontal_small);
-					} else if (_item == item.smallverttable) {
-						instance_create_layer(x,y, "Instances", obj_vertical_small);
-					} 
-				break;
-			
 				case item.largeshelf :
 				case item.largehortable :
 				case item.largeverttable :

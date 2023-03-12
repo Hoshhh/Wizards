@@ -131,7 +131,7 @@ stateDrag = function() {
 			}
 		}
 		
-		//Prevents adding items other than potions to the shop container
+		//Prevents adding items other than potions to the shop container (Use last potion on item list to limit)
 		if (inventoryHover == _shop) {
 			if (itemDrag > item.LargeDarkRedPotion) {
 				inventoryDrag.inventory[slotDrag].itemInSlot = itemDrag;

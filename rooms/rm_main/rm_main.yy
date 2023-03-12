@@ -16,7 +16,6 @@
     {"name":"inst_6175AF7D","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_6DE73209","path":"rooms/rm_main/rm_main.yy",},
     {"name":"inst_4CC45FEE","path":"rooms/rm_main/rm_main.yy",},
-    {"name":"inst_161020C5","path":"rooms/rm_main/rm_main.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -37,7 +36,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52CB54B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_rock_base","path":"objects/obj_rock_base/obj_rock_base.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":944.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6175AF7D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_rock_base","path":"objects/obj_rock_base/obj_rock_base.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":720.0,"y":96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6DE73209","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_rock_base","path":"objects/obj_rock_base/obj_rock_base.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":96.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_161020C5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oShopContainer","path":"objects/oShopContainer/oShopContainer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"FenceBottom","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":48,"SerialiseWidth":64,"TileCompressedData":[
 -1259,-2147483648,1,306,-7,307,2,308,309,-7,310,1,311,-1795,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tile_outside","path":"tilesets/tile_outside/tile_outside.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},

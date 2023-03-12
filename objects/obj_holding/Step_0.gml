@@ -29,23 +29,12 @@ yy = yy*cs;
 
 #region Placeable objects
 
-var _col32 = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
-var _colFurnace = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
-
-if (_col32 == noone) {
-	switch(item_num) {
-		case item.chest	:
-			BuildObject(obj)
-		break;
-		
-		case item.furnace :
-			BuildObject(obj)
-		break;
-	}
-} else { color = c_red }
+var _colChest = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
+var _colFurnace = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
+var _colSmallShelf = collision_rectangle(xx-4,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
+var _colLargeShelf = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
 
 
-/*
 if (_colChest == noone and item_num == item.chest) {
 	color = c_green;
 	if (mouse_check_button_pressed(mb_left)) {
@@ -57,10 +46,7 @@ if (_colChest == noone and item_num == item.chest) {
 			xx = xx*cs;
 			yy = yy*cs;
 			
-			with(instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", oChest)) {
-				 instance_create_layer(x, y, "Instances", obj_chest)	
-			}
-			
+			instance_create_layer(xx, yy + (cs/2), "Instances", oChest)
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
@@ -75,13 +61,58 @@ if (_colChest == noone and item_num == item.chest) {
 			xx = xx*cs;
 			yy = yy*cs;
 			
-			with(instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", oFurnace)) {
-				 instance_create_layer(x, y, "Instances", obj_furnace)	
-			}
-			
+			instance_create_layer(xx, yy + (cs/2), "Instances", obj)
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
-} else { color = c_red }*/
+} else if (_colLargeShelf == noone and item_num == item.largeshelf) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", obj_shelf_large)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+}  else if (_colSmallShelf == noone and item_num == item.smallshelf) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx, yy + (cs/2), "Instances", obj_shelf_small)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+}
+
+
+else { color = c_red }
+
 
 #endregion
+/*
+if (_col32 == noone) {
+	BuildObject(obj, item_num)
+	
+	switch(item_num) {
+		case item.chest	:
+			BuildObject(obj)
+		break;
+		
+		case item.furnace :
+			BuildObject(obj)
+		break;
+	}
+} else { color = c_red }

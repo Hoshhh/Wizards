@@ -11,7 +11,7 @@ function BuildChest(){
 			xx = xx*cs;
 			yy = yy*cs;
 			
-			with(instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", oChest)) {
+			with(instance_create_layer(xx + (cs/2)-8, yy + (cs/2), "Instances", oChest)) {
 				 instance_create_layer(x, y, "Instances", obj_chest)	
 			}
 			

@@ -1,5 +1,8 @@
 if (room == rm_creator) exit;
 if (instance_exists(obj_cutscene)) exit;
+
+
+
 if (!show_shop) exit;
 
 mousex = device_mouse_x_to_gui(0);

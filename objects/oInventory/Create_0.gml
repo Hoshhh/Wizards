@@ -132,7 +132,13 @@ enum item {
 	ironbar					= 52,
 	goldore					= 53,
 	goldbar					= 54,
-	height					= 55,
+	smallshelf				= 55,
+	largeshelf				= 56,
+	smallhortable			= 57,
+	largehortable			= 58,
+	smallverttable			= 59,
+	largeverttable			= 60,
+	height					= 61,
 }
 
 #region Item Info Array
@@ -468,48 +474,84 @@ item_info[54] = {
 	obj : noone
 }
 
+item_info[55] = {
+	iname : "Small Shelf",
+	quality : 1,
+	obj : oShopContainer
+}
+
+item_info[56] = {
+	iname : "Large Shelf",
+	quality : 1,
+	obj : oShopContainer
+}
+
+item_info[57] = {
+	iname : "Small Horizontal Table",
+	quality : 1,
+	obj : oShopContainer
+}
+
+item_info[58] = {
+	iname : "Large Horizontal Table",
+	quality : 1,
+	obj : oShopContainer
+}
+
+item_info[59] = {
+	iname : "Small Verticle Table",
+	quality : 1,
+	obj : oShopContainer
+}
+
+item_info[60] = {
+	iname : "Large Verticle Table",
+	quality : 1,
+	obj : oShopContainer
+}
+
 #endregion
 
 inventory = array_create(INVENTORY_SLOTS, -1)
 
 inventory[0] = {
-	itemInSlot	: item.copperore,
+	itemInSlot	: item.largeverttable,
 	amount		: 100,
-	iname		: "Copper Ore",
+	iname		: "Large Vertical Table",
 	quality		: 1,
-	obj			: noone
+	obj			: oShopContainer
 }
 
 inventory[1] = {
-	itemInSlot	: item.ironore,
+	itemInSlot	: item.smallverttable,
 	amount		: 100,
-	iname		: "Iron Ore",
+	iname		: "Small Vertical Table",
 	quality		: 1,
-	obj			: noone
+	obj			: oShopContainer
 }
 
 inventory[2] = {
-	itemInSlot	: item.goldore,
-	amount		: 100,
-	iname		: "Gold Ore",
+	itemInSlot	: item.smallshelf,
+	amount		: 10,
+	iname		: "Small Cabinet",
 	quality		: 1,
-	obj			: noone
+	obj			: oShopContainer
 }
 
 inventory[3] = {
+	itemInSlot	: item.largehortable,
+	amount		: 10,
+	iname		: "Large Horizontal Table",
+	quality		: 1,
+	obj			: oShopContainer
+}
+
+inventory[4] = {
 	itemInSlot	: item.chest,
 	amount		: 10,
 	iname		: "Chest",
 	quality		: 1,
 	obj			: oChest
-}
-
-inventory[4] = {
-	itemInSlot	: item.furnace,
-	amount		: 10,
-	iname		: "Furnace",
-	quality		: 1,
-	obj			: oFurnace
 }
 
 var yy = 5; repeat(INVENTORY_SLOTS)

@@ -2,6 +2,8 @@ shop_slots = 6;
 depth = -1;
 scale = display_manager.window_scale*0.9;
 
+obj = -1;
+
 cell_size = 16;
 shop_slots_width = 2;
 shop_slots_height = 3;
@@ -10,7 +12,7 @@ mouse_in_shop = false;
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);
 
-show_shop = true;
+show_shop = false;
 
 selected_slot = 0;
 m_slotx = 0;

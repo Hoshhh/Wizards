@@ -17,13 +17,43 @@ if (obj != noone) {
 
 switch(item_num) {
 	case item.chest :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
-		draw_sprite_ext(spr_chest02, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+		draw_rectangle_color(xx-cs,yy,xx+(cs-1),yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_chest02, 0, xx, yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 	
 	case item.furnace :
+		draw_rectangle_color(xx-cs,yy,xx+(cs-1),yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_furnace, 0, xx, yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.smallshelf :
+		draw_rectangle_color(xx-cs,yy,xx+(cs-1),yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_shelf_small, 0, xx, yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.largeshelf :
 		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
-		draw_sprite_ext(spr_furnace, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+		draw_sprite_ext(spr_shelf_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.smallhortable :
+		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_horizontal_small, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.largehortable :
+		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_horizontal_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.smallverttable :
+		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_verticle_small, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+	break;
+	
+	case item.largeverttable :
+		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_verticle_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 }
 
