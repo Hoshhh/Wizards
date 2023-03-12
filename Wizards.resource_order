@@ -142,6 +142,7 @@
     {"name":"obj_pick","order":3,"path":"objects/obj_pick/obj_pick.yy",},
     {"name":"rock_scripts","order":1,"path":"scripts/rock_scripts/rock_scripts.yy",},
     {"name":"par_depthobject","order":5,"path":"objects/par_depthobject/par_depthobject.yy",},
+    {"name":"rm_empty","order":9,"path":"rooms/rm_empty/rm_empty.yy",},
     {"name":"noBuildZone","order":10,"path":"objects/noBuildZone/noBuildZone.yy",},
     {"name":"obj_shelf_small","order":1,"path":"objects/obj_shelf_small/obj_shelf_small.yy",},
     {"name":"snd_voice4","order":1,"path":"sounds/snd_voice4/snd_voice4.yy",},

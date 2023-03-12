@@ -515,17 +515,17 @@ item_info[60] = {
 inventory = array_create(INVENTORY_SLOTS, -1)
 
 inventory[0] = {
-	itemInSlot	: item.largeverttable,
+	itemInSlot	: item.smallverttable,
 	amount		: 100,
-	iname		: "Large Vertical Table",
+	iname		: "Small Vertical Table",
 	quality		: 1,
 	obj			: oShopContainer
 }
 
 inventory[1] = {
-	itemInSlot	: item.smallverttable,
+	itemInSlot	: item.largeverttable,
 	amount		: 100,
-	iname		: "Small Vertical Table",
+	iname		: "Large Vertical Table",
 	quality		: 1,
 	obj			: oShopContainer
 }
@@ -539,6 +539,22 @@ inventory[2] = {
 }
 
 inventory[3] = {
+	itemInSlot	: item.largeshelf,
+	amount		: 10,
+	iname		: "Large Shelf",
+	quality		: 1,
+	obj			: oShopContainer
+}
+
+inventory[4] = {
+	itemInSlot	: item.smallhortable,
+	amount		: 10,
+	iname		: "Small Horizontal Table",
+	quality		: 1,
+	obj			: oShopContainer
+}
+
+inventory[5] = {
 	itemInSlot	: item.largehortable,
 	amount		: 10,
 	iname		: "Large Horizontal Table",
@@ -546,7 +562,15 @@ inventory[3] = {
 	obj			: oShopContainer
 }
 
-inventory[4] = {
+inventory[6] = {
+	itemInSlot	: item.furnace,
+	amount		: 10,
+	iname		: "Furnace",
+	quality		: 1,
+	obj			: oFurnace
+}
+
+inventory[7] = {
 	itemInSlot	: item.chest,
 	amount		: 10,
 	iname		: "Chest",
@@ -554,7 +578,8 @@ inventory[4] = {
 	obj			: oChest
 }
 
-var yy = 5; repeat(INVENTORY_SLOTS)
+
+var yy = 8; repeat(INVENTORY_SLOTS)
 {
 		inventory[yy] = {
 			itemInSlot	: item.none,

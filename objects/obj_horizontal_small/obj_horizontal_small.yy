@@ -9,7 +9,10 @@
     "name": "Shop",
     "path": "folders/Objects/Interactables/Placeables/Shop.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "par_depthobject",
+    "path": "objects/par_depthobject/par_depthobject.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_horizontal_small",
+    "path": "sprites/spr_horizontal_small/spr_horizontal_small.yy",
+  },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

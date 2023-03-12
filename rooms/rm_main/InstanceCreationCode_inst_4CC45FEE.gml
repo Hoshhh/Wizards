@@ -1,4 +1,4 @@
-targetRoom = rm_alchemy;
+targetRoom = rm_empty;
 targetX = 150;
 targetY = 220;
 

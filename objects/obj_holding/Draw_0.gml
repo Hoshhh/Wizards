@@ -32,27 +32,27 @@ switch(item_num) {
 	break;
 	
 	case item.largeshelf :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_rectangle_color(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, c,c,c,c, true);
 		draw_sprite_ext(spr_shelf_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 	
 	case item.smallhortable :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
-		draw_sprite_ext(spr_horizontal_small, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
+		draw_rectangle_color(xx-cs,yy,xx+(cs-1),yy+cs-1, c,c,c,c, true);
+		draw_sprite_ext(spr_horizontal_small, 0, xx, yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 	
 	case item.largehortable :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_rectangle_color(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, c,c,c,c, true);
 		draw_sprite_ext(spr_horizontal_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 	
 	case item.smallverttable :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_rectangle_color(xx,yy-(cs*2)+8,xx+(cs-1),yy+8, c,c,c,c, true);
 		draw_sprite_ext(spr_verticle_small, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 	
 	case item.largeverttable :
-		draw_rectangle_color(xx-8,yy,xx+(cs*2)-9,yy+cs-1, c,c,c,c, true);
+		draw_rectangle_color(xx,yy-(cs*3)+8,xx+(cs-1),yy+8, c,c,c,c, true);
 		draw_sprite_ext(spr_verticle_large, 0, xx + (cs/2), yy + (cs/2), 1,1,0,c_white, 0.7);
 	break;
 }

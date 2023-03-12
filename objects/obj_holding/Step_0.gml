@@ -31,8 +31,12 @@ yy = yy*cs;
 
 var _colChest = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
 var _colFurnace = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
-var _colSmallShelf = collision_rectangle(xx-4,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
-var _colLargeShelf = collision_rectangle(xx-8,yy,xx+(cs*2)-9,yy+cs-1, all, false, false);
+var _colSmallShelf = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
+var _colLargeShelf = collision_rectangle(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, all, false, false);
+var _colSmallHor = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
+var _colLargeHor = collision_rectangle(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, all, false, false);
+var _colSmallVert = collision_rectangle(xx,yy-(cs*2)+8,xx+(cs-1),yy+8, all, false, false);
+var _colLargeVert = collision_rectangle(xx,yy-(cs*3)+8,xx+(cs-1),yy+8, all, false, false);
 
 
 if (_colChest == noone and item_num == item.chest) {
@@ -61,7 +65,7 @@ if (_colChest == noone and item_num == item.chest) {
 			xx = xx*cs;
 			yy = yy*cs;
 			
-			instance_create_layer(xx, yy + (cs/2), "Instances", obj)
+			instance_create_layer(xx, yy + (cs/2), "Instances", oFurnace)
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
@@ -92,6 +96,66 @@ if (_colChest == noone and item_num == item.chest) {
 			yy = yy*cs;
 			
 			instance_create_layer(xx, yy + (cs/2), "Instances", obj_shelf_small)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+} else if (_colSmallHor == noone and item_num == item.smallhortable) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx, yy + (cs/2), "Instances", obj_horizontal_small)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+} else if (_colLargeHor == noone and item_num == item.largehortable) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", obj_horizontal_large)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+} else if (_colSmallVert == noone and item_num == item.smallverttable) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", obj_vertical_small)
+			inventory[bar_selected_slot].amount -= 1;
+		}
+	}
+} else if (_colLargeVert == noone and item_num == item.largeverttable) {
+	color = c_green;
+	if (mouse_check_button_pressed(mb_left)) {
+		with(oInventory) {
+			var cs = cell_size;
+			var xx = (mouse_x div cs);
+			var yy = (mouse_y div cs);
+
+			xx = xx*cs;
+			yy = yy*cs;
+			
+			instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", obj_vertical_large)
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
