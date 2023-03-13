@@ -27,12 +27,40 @@ xx = xx*cs;
 yy = yy*cs;
 
 
+if (obj != noone) {
+	switch(item_num) {
+		case item.chest : 
+			spr = spr_chest02
+		break;
+		
+		case item.smallshelf : 
+			spr = object_get_sprite(obj_shelf_small)
+		break;
+	}	
+}
+
+var bl = sprite_get_bbox_left(spr);
+var br = sprite_get_bbox_right(spr);
+var bt = sprite_get_bbox_top(spr);
+var bb = sprite_get_bbox_bottom(spr);
+var h = sprite_get_height(spr)
+var w = sprite_get_width(spr)
+var _col = collision_rectangle((mx+bl)-w/2,(my+bt)-h,(mx+br)-w/2,(my+bb)-h, all, false, false);
+
+if (_col = noone) {
+	color = c_green;
+	BuildObject(obj, item_num)
+} else {
+	color = c_red;	
+}
+/*
+
 #region Placeable objects
 
 var _colChest = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
 var _colFurnace = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
 var _colSmallShelf = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
-var _colLargeShelf = collision_rectangle(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, all, false, false);
+var _colLargeShelf = collision_rectangle(xx-cs,yy-cs,xx+(cs*2)-1,yy, all, false, false);
 var _colSmallHor = collision_rectangle(xx-cs,yy,xx+(cs-1),yy+cs-1, all, false, false);
 var _colLargeHor = collision_rectangle(xx-cs,yy,xx+(cs*2)-1,yy+cs-1, all, false, false);
 var _colSmallVert = collision_rectangle(xx,yy-(cs*2)+8,xx+(cs-1),yy+8, all, false, false);
@@ -80,7 +108,7 @@ if (_colChest == noone and item_num == item.chest) {
 			xx = xx*cs;
 			yy = yy*cs;
 			
-			instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", obj_shelf_large)
+			instance_create_layer(xx + (cs/2), yy, "Instances", obj_shelf_large)
 			inventory[bar_selected_slot].amount -= 1;
 		}
 	}
@@ -180,3 +208,4 @@ if (_col32 == noone) {
 		break;
 	}
 } else { color = c_red }
+*/

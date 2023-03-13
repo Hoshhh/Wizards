@@ -10,7 +10,7 @@ function BuildObject(_obj, _item){
 		xx = xx*cs;
 		yy = yy*cs;
 			
-		var _inst = instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", _obj)
+		var _inst = instance_create_layer(mx, my, "Instances", _obj)
 		
 		with(_inst) {
 			switch(_item) {

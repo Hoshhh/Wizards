@@ -10,10 +10,23 @@ function BuildObject48(_obj, _item){
 		xx = xx*cs;
 		yy = yy*cs;
 			
-		var _inst = instance_create_layer(xx + (cs/2), yy + (cs/2), "Instances", _obj)
+		var _inst = instance_create_layer(mouse_x, mouse_y, "Instances", _obj)
 		
 		with(_inst) {
 			switch(_item) {
+				case item.smallshelf : 
+				case item.smallhortable :
+				case item.smallverttable :
+					_inst.shop_slots = 2;	
+					if (_item == item.smallshelf) {
+						instance_create_layer(x,y, "Instances", obj_shelf_small);
+					} else if (_item == item.smallhortable) {
+						instance_create_layer(x,y, "Instances", obj_horizontal_small);
+					} else if (_item == item.smallverttable) {
+						instance_create_layer(x,y, "Instances", obj_vertical_small);
+					} 
+				break;
+			
 				case item.largeshelf :
 				case item.largehortable :
 				case item.largeverttable :

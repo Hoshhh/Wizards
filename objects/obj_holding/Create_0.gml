@@ -17,3 +17,6 @@ my = mouse_y;
 color = c_red;
 
 obj = -1;
+snap = false;
+
+spr = -1;
