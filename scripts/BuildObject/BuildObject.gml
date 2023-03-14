@@ -9,8 +9,11 @@ function BuildObject(_obj, _item){
 
 		xx = xx*cs;
 		yy = yy*cs;
-			
-		var _inst = instance_create_layer(mx, my, "Instances", _obj)
+		if (snap) {
+			var _inst = instance_create_layer(xx, yy + (cs), "Instances", _obj)
+		} else {
+			var _inst = instance_create_layer(mx, my, "Instances", _obj)
+		}
 		
 		with(_inst) {
 			switch(_item) {

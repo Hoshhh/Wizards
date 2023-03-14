@@ -39,19 +39,38 @@ if (obj != noone) {
 	}	
 }
 
+if (keyboard_check(vk_shift)) {
+	snap = true;	
+} else {
+	snap = false;	
+}
+
+
 var bl = sprite_get_bbox_left(spr);
 var br = sprite_get_bbox_right(spr);
 var bt = sprite_get_bbox_top(spr);
 var bb = sprite_get_bbox_bottom(spr);
 var h = sprite_get_height(spr)
 var w = sprite_get_width(spr)
-var _col = collision_rectangle((mx+bl)-w/2,(my+bt)-h,(mx+br)-w/2,(my+bb)-h, all, false, false);
 
-if (_col = noone) {
-	color = c_green;
-	BuildObject(obj, item_num)
+if (snap) {
+	var _col = collision_rectangle((xx+bl)-w/2,(yy+bt)-h+cs,(xx+br)-w/2,(yy+bb)-h+cs, all, false, false);
+
+	if (_col = noone) {
+		color = c_green;
+		BuildObject(obj, item_num)
+	} else {
+		color = c_red;	
+	}
 } else {
-	color = c_red;	
+	var _col = collision_rectangle((mx+bl)-w/2,(my+bt)-h,(mx+br)-w/2,(my+bb)-h, all, false, false);
+
+	if (_col = noone) {
+		color = c_green;
+		BuildObject(obj, item_num)
+	} else {
+		color = c_red;	
+	}
 }
 /*
 

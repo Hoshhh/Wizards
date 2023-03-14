@@ -7,6 +7,9 @@ draw_sprite_part(item_spr, 0, x_frame*cell_size, y_frame*cell_size, cell_size, c
 var cs = cell_size;
 var xx = (mx div cs);
 var yy = (my div cs);
+xx = xx*cs;
+yy = yy*cs;
+	
 var c = color;
 var bl = sprite_get_bbox_left(spr);
 var br = sprite_get_bbox_right(spr);
@@ -15,8 +18,13 @@ var bb = sprite_get_bbox_bottom(spr);
 var h = sprite_get_height(spr)
 var w = sprite_get_width(spr)
 
-draw_rectangle_color((mx+bl)-w/2,(my+bt)-h,(mx+br)-w/2,(my+bb)-h, c,c,c,c, true);
-draw_sprite_ext(spr, 0, mx, my , 1,1,0,c_white, 0.7);
+if (snap) {
+	draw_rectangle_color((xx+bl)-w/2,(yy+bt)-h+cs,(xx+br)-w/2,(yy+bb)-h+cs, c,c,c,c, true);
+	draw_sprite_ext(spr, 0, xx, yy + (cs), 1,1,0,c_white, 0.7);
+} else {
+	draw_rectangle_color((mx+bl)-w/2,(my+bt)-h,(mx+br)-w/2,(my+bb)-h, c,c,c,c, true);
+	draw_sprite_ext(spr, 0, mx, my, 1,1,0,c_white, 0.7);
+}
 
 /*
 draw_rectangle_color(mx-(br/2),my-(bb/2),mx+(br/2)-1,my, c,c,c,c, true);
