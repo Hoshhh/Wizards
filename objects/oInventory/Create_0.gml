@@ -134,11 +134,7 @@ enum item {
 	goldbar					= 54,
 	smallshelf				= 55,
 	largeshelf				= 56,
-	smallhortable			= 57,
-	largehortable			= 58,
-	smallverttable			= 59,
-	largeverttable			= 60,
-	height					= 61,
+	height					= 57,
 }
 
 #region Item Info Array
@@ -515,22 +511,6 @@ item_info[60] = {
 inventory = array_create(INVENTORY_SLOTS, -1)
 
 inventory[0] = {
-	itemInSlot	: item.smallverttable,
-	amount		: 100,
-	iname		: "Small Vertical Table",
-	quality		: 1,
-	obj			: oShopContainer
-}
-
-inventory[1] = {
-	itemInSlot	: item.largeverttable,
-	amount		: 100,
-	iname		: "Large Vertical Table",
-	quality		: 1,
-	obj			: oShopContainer
-}
-
-inventory[2] = {
 	itemInSlot	: item.smallshelf,
 	amount		: 10,
 	iname		: "Small Cabinet",
@@ -538,7 +518,7 @@ inventory[2] = {
 	obj			: oShopContainer
 }
 
-inventory[3] = {
+inventory[1] = {
 	itemInSlot	: item.largeshelf,
 	amount		: 10,
 	iname		: "Large Shelf",
@@ -546,23 +526,8 @@ inventory[3] = {
 	obj			: oShopContainer
 }
 
-inventory[4] = {
-	itemInSlot	: item.smallhortable,
-	amount		: 10,
-	iname		: "Small Horizontal Table",
-	quality		: 1,
-	obj			: oShopContainer
-}
 
-inventory[5] = {
-	itemInSlot	: item.largehortable,
-	amount		: 10,
-	iname		: "Large Horizontal Table",
-	quality		: 1,
-	obj			: oShopContainer
-}
-
-inventory[6] = {
+inventory[2] = {
 	itemInSlot	: item.furnace,
 	amount		: 10,
 	iname		: "Furnace",
@@ -570,7 +535,7 @@ inventory[6] = {
 	obj			: oFurnace
 }
 
-inventory[7] = {
+inventory[3] = {
 	itemInSlot	: item.chest,
 	amount		: 10,
 	iname		: "Chest",
@@ -579,7 +544,7 @@ inventory[7] = {
 }
 
 
-var yy = 8; repeat(INVENTORY_SLOTS)
+var yy = 4; repeat(INVENTORY_SLOTS)
 {
 		inventory[yy] = {
 			itemInSlot	: item.none,

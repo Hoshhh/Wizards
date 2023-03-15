@@ -10,8 +10,8 @@
     "path": "folders/Objects/Interactables/Placeables/Shop.yy",
   },
   "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
+    "name": "par_shelf",
+    "path": "objects/par_shelf/par_shelf.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
