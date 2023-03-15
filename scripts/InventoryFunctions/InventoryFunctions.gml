@@ -39,6 +39,7 @@ function InventoryAdd(rootObject, itemType, _amount) {
 			inventory[_slot].iname = oInventory.item_info[itemType].iname;
 			inventory[_slot].quality = oInventory.item_info[itemType].quality;
 			inventory[_slot].obj = oInventory.item_info[itemType].obj;	
+			inventory[_slot].sell = oInventory.item_info[itemType].sell;	
 		}
 		return true;
 	} else return false;
@@ -56,12 +57,14 @@ function InventoryStack(rootObject, itemType, _slotFrom, _slotTo) {
 	rootObject.inventory[_slotTo].iname = rootObject.inventory[_slotFrom].iname;	
 	rootObject.inventory[_slotTo].quality = rootObject.inventory[_slotFrom].quality;
 	rootObject.inventory[_slotTo].obj = rootObject.inventory[_slotFrom].obj;
+	rootObject.inventory[_slotTo].sell = rootObject.inventory[_slotFrom].sell;
 	
 	rootObject.inventory[_slotFrom].itemInSlot = -1;
 	rootObject.inventory[_slotFrom].amount -= rootObject.inventory[_slotFrom].amount;
 	rootObject.inventory[_slotFrom].iname = "";	
 	rootObject.inventory[_slotFrom].quality = 0;
 	rootObject.inventory[_slotFrom].obj = noone;
+	rootObject.inventory[_slotFrom].obj = 0;
 }
 
 function InventoryToOtherStack(objectFrom, slotFrom, objectTo, slotTo) {
@@ -70,6 +73,7 @@ function InventoryToOtherStack(objectFrom, slotFrom, objectTo, slotTo) {
 	objectTo.inventory[slotTo].iname = objectFrom.inventory[slotFrom].iname;
 	objectTo.inventory[slotTo].quality = objectFrom.inventory[slotFrom].quality;
 	objectTo.inventory[slotTo].obj = objectFrom.inventory[slotFrom].obj;
+	objectTo.inventory[slotTo].sell = objectFrom.inventory[slotFrom].sell;
 
 	
 	objectFrom.inventory[slotFrom].itemInSlot = -1;
@@ -77,6 +81,7 @@ function InventoryToOtherStack(objectFrom, slotFrom, objectTo, slotTo) {
 	objectFrom.inventory[slotFrom].iname = "";
 	objectFrom.inventory[slotFrom].quality = 0;
 	objectFrom.inventory[slotFrom].obj = noone;
+	objectFrom.inventory[slotFrom].sell = 0;
 	
 }
 
@@ -92,19 +97,23 @@ function InventoryMoveAll(objectFrom, objectTo) {
 				objectFrom.inventory[i].amount = 0;
 				objectFrom.inventory[i].iname = "";	
 				objectFrom.inventory[i].quality = 0;
-				objectFrom.inventory[i].quality = noone;
+				objectFrom.inventory[i].obj = noone;
+				objectFrom.inventory[i].sell = 0;
+				
 			} else if (objectTo.inventory[j].itemInSlot == item.none) {
 				objectTo.inventory[j].itemInSlot = objectFrom.inventory[i].itemInSlot;	
 				objectTo.inventory[j].amount += objectFrom.inventory[i].amount;
 				objectTo.inventory[j].iname = objectFrom.inventory[i].iname;
 				objectTo.inventory[j].quality = objectFrom.inventory[i].quality;
 				objectTo.inventory[j].obj = objectFrom.inventory[i].obj;
+				objectTo.inventory[j].sell = objectFrom.inventory[i].sell;
 			
 				objectFrom.inventory[i].itemInSlot = item.none;	
 				objectFrom.inventory[i].amount = 0;	
 				objectFrom.inventory[i].iname = "";	
 				objectFrom.inventory[i].quality = 0;
 				objectFrom.inventory[i].obj = noone;
+				objectFrom.inventory[i].sell = 0;
 			}
 		}
 		
@@ -129,6 +138,7 @@ function InventoryAddOne(objectFrom, objectTo, itemType, _slotFrom, _slotTo) {
 	objectTo.inventory[_slotTo].iname = objectFrom.inventory[_slotFrom].iname;	
 	objectTo.inventory[_slotTo].quality = objectFrom.inventory[_slotFrom].quality;
 	objectTo.inventory[_slotTo].obj = objectFrom.inventory[_slotFrom].obj;
+	objectTo.inventory[_slotTo].sell = objectFrom.inventory[_slotFrom].sell;
 	
 	objectFrom.inventory[_slotFrom].amount -= 1;
 	
@@ -138,6 +148,7 @@ function InventoryAddOne(objectFrom, objectTo, itemType, _slotFrom, _slotTo) {
 		objectFrom.inventory[_slotFrom].iname = "";	
 		objectFrom.inventory[_slotFrom].quality = 0;
 		objectFrom.inventory[_slotFrom].obj = noone;
+		objectFrom.inventory[_slotFrom].sell = 0;
 		
 		//Return to free state
 		state = stateFree;
@@ -158,6 +169,7 @@ function InventoryStackAll(rootInventory) {
 				rootInventory[l].iname = "";
 				rootInventory[l].quality = 0;
 				rootInventory[l].obj = noone;
+				rootInventory[l].sell = 0;
 			} 
 		}
 	}

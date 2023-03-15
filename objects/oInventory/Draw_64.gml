@@ -2,7 +2,7 @@ if (room == rm_creator) exit;
 if (instance_exists(obj_cutscene)) exit;
 
 var c = c_yellow
-draw_text_color(10,200, "selected_slot: " + string(selected_slot), c,c,c,c, 1);
+//draw_text_color(10,200, "selected_slot: " + string(selected_slot), c,c,c,c, 1);
 
 #region Toolbar
 
@@ -86,11 +86,11 @@ draw_text_color(10,190, "mouse_in_chest: " + string(oChest.mouse_in_chest), c,c,
 draw_text_color(10,210, "inv buttons_selected: " + string(button), c,c,c,c, 1);
 draw_text_color(10,230, "chest buttons_selected: " + string(oChest.button), c,c,c,c, 1);
 */
-
+/*
 for (var j = 0; j < INVENTORY_SLOTS; j++) {
 	var ydist = 20
 	draw_text_color(300,ydist*j + 80, string(inventory[j]) + "\n", c,c,c,c, 1);
-}
+}*/
 
 
 draw_sprite_part_ext(

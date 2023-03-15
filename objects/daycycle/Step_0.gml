@@ -7,6 +7,9 @@ minutes = seconds/60;
 hours = minutes/60;
 notification--;
 
+if (floor(hours) == hours) {
+	test = 1;
+}
 
 //if draw_daylight
 #region Phases and Variables

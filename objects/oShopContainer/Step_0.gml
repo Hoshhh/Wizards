@@ -1,7 +1,64 @@
 if (room == rm_creator) exit;
 if (instance_exists(obj_cutscene)) exit;
 
+//Automatic selling of potions
+//Sells only made between 10am - 8pm
+//Sells 10% of total stock every hour
+//If total stock changes, sell 10% from the new total
 
+with(daycycle) {
+	//if (time_pause) exit;
+	if (hours >= 10 and hours <= 20) {
+		if (floor(hours) == hours) {
+			//floor(other.total_stock * 0.10);
+			var remainder = 0;
+			slot = 0;
+			
+			if (other.inventory[other.slot].itemInSlot == item.none) {	
+				other.slot += 1;
+				
+				if (other.slot >= other.shop_slots) {
+					other.slot = 0;	
+				}
+			}
+			
+			if (other.inventory[other.slot].amount >= other.sellsPerHour) {
+				other.inventory[other.slot].amount -= other.sellsPerHour;
+				oInventory.currency += other.sellsPerHour * other.inventory[other.slot].sell
+			} else if (other.inventory[other.slot].amount < other.sellsPerHour) {
+				//When the current slot has less than the sells per hour
+				remainder = other.sellsPerHour - other.inventory[other.slot].amount;
+				oInventory.currency += other.inventory[other.slot].amount * other.inventory[other.slot].sell
+				other.inventory[other.slot].amount = 0;	
+				
+				//Remove item if amount is 0
+				if (other.inventory[other.slot].amount = 0) {
+					other.inventory[other.slot].itemInSlot = item.none;	
+					other.inventory[other.slot].iname = "";	
+					other.inventory[other.slot].quality = 0;	
+					other.inventory[other.slot].obj = noone;
+					other.inventory[other.slot].sell = 0;
+				}
+				
+				//Adjust slot
+				other.slot += 1;
+				
+				if (other.inventory[other.slot].itemInSlot != item.none) {
+					oInventory.currency += remainder * other.inventory[other.slot].sell;
+					other.inventory[other.slot].amount -= remainder;
+				}
+			}
+			
+			if (other.inventory[other.slot].amount = 0) {
+				other.inventory[other.slot].itemInSlot = item.none;	
+				other.inventory[other.slot].iname = "";	
+				other.inventory[other.slot].quality = 0;	
+				other.inventory[other.slot].obj = noone;
+				other.inventory[other.slot].sell = 0;
+			}
+		}
+	}
+}
 
 if (!show_shop) exit;
 
@@ -34,3 +91,15 @@ if (nx >= 0 and nx < shop_slots_width and ny >= 0 and ny < shop_slots_height and
 
 //Set Selected Slot to Mouse Position
 selected_slot = min(shop_slots - 1, m_slotx + (m_sloty * shop_slots_width));
+
+
+var len = array_length(inventory);
+if !array_equals(inventory, new_array) {
+	total_stock = 0;
+	for(var i=0; i < array_length(inventory); i++) {
+		if (inventory[i].itemInSlot != item.none) {
+			total_stock += inventory[i].amount;	
+			array_copy(new_array, 0, inventory, 0, len);
+		}
+	}
+}

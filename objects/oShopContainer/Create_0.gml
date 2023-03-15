@@ -45,8 +45,12 @@ select_y = shop_ui_y + (13 * scale);
 testx = -1;
 testy = -1;
 
-inventory = array_create(shop_slots, -1)
+slot = 0;
+total_stock = 0;
+sellsPerHour = 10
+new_array = array_create(shop_slots, -1)
 
+inventory = array_create(shop_slots, -1)
 
 var yy = 0; repeat(shop_slots)
 {
@@ -55,7 +59,8 @@ var yy = 0; repeat(shop_slots)
 			amount		: 0,
 			iname		: "",
 			quality		: 0,
-			obj			: noone
+			obj			: noone,
+			sell		: 0
 		}
 		yy += 1;
 }

@@ -16,6 +16,8 @@ darkness = 0;
 light_color = c_black;
 draw_daylight = false;
 
+test = 0;
+
 guiWidth = display_get_gui_width();
 guiHeight = display_get_gui_height();
 
