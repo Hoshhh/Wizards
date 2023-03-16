@@ -149,6 +149,7 @@
     {"name":"SaveFunctions","order":8,"path":"scripts/SaveFunctions/SaveFunctions.yy",},
     {"name":"spr_craft_select","order":2,"path":"sprites/spr_craft_select/spr_craft_select.yy",},
     {"name":"obj_arrow_left","order":5,"path":"objects/obj_arrow_left/obj_arrow_left.yy",},
+    {"name":"obj_notification","order":15,"path":"objects/obj_notification/obj_notification.yy",},
     {"name":"oMouse","order":2,"path":"objects/oMouse/oMouse.yy",},
     {"name":"spr_tree_base_hit","order":1,"path":"sprites/spr_tree_base_hit/spr_tree_base_hit.yy",},
     {"name":"spr_owl","order":16,"path":"sprites/spr_owl/spr_owl.yy",},

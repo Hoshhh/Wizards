@@ -122,6 +122,7 @@ stateDrag = function() {
 	if (global.input_select) {
 		var _furnace = instance_nearest(obj_player.x, obj_player.y, oFurnace);
 		var _shop = instance_nearest(obj_player.x, obj_player.y, oShopContainer);
+		var create_notification = false;
 		
 		//Prevents adding anything to the output slot in furnaces
 		if (inventoryHover == _furnace) {
@@ -153,6 +154,49 @@ stateDrag = function() {
 				InventoryToOtherStack(inventoryDrag, slotDrag, inventoryHover, slotHover)	
 			}
 		} else {
+			create_notification = true;
+			if (create_notification) {
+				#region Create notification
+				if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
+				
+				var in = inventoryDrag.inventory[slotDrag].itemInSlot;
+				var sn = inventoryDrag.inventory[slotDrag].amount
+				with(obj_notification) {
+					//Create_grid
+					if (!ds_exists(ds_notifications, ds_type_grid)) {
+						ds_notifications = ds_grid_create(2,1);
+						var not_grid = ds_notifications;
+						not_grid[# 0, 0] = -sn;
+						not_grid[# 1, 0] = oInventory.item_info[in].iname;
+					} else {
+						//Add to grid
+						event_perform(ev_other, ev_user4);
+						
+						var not_grid = ds_notifications;
+						var grid_height = ds_grid_height(not_grid);
+						var item_name = oInventory.item_info[in].iname;
+						var in_grid = false;
+						
+						var yy = 0; repeat(grid_height) {
+							//If we are already in the grid
+							if (item_name == not_grid[# 1, yy]) {
+								not_grid[# 0, yy] -= sn;	
+								in_grid = true;
+								break;
+							}
+							yy++;
+						}
+						
+						if (!in_grid) {
+							ds_grid_resize(not_grid, 2, grid_height+1);
+							not_grid[# 0, grid_height] = -sn;
+							not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+						}
+					}
+				}
+				#endregion
+			}
+			
 			inventoryDrag.inventory[slotDrag].itemInSlot = -1;
 			inventoryDrag.inventory[slotDrag].amount = 0;
 			inventoryDrag.inventory[slotDrag].iname = "";
@@ -179,7 +223,7 @@ stateDrag = function() {
 		slotDrag = -1;
 	}
 	
-	if (global.input_add_one) {
+	if (global.input_add_one and slotHover != -1) {
 		if (inventoryHover.inventory[slotHover].itemInSlot == item.none || inventoryHover.inventory[slotHover].itemInSlot == itemDrag) {
 			InventoryAddOne(inventoryDrag, inventoryHover, itemDrag, slotDrag, slotHover);
 		}

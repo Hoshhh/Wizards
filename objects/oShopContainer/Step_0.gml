@@ -16,7 +16,6 @@ with(daycycle) {
 			
 			if (other.inventory[other.slot].itemInSlot == item.none) {	
 				other.slot += 1;
-				
 				if (other.slot >= other.shop_slots) {
 					other.slot = 0;	
 				}

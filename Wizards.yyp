@@ -277,6 +277,7 @@
     {"id":{"name":"SaveFunctions","path":"scripts/SaveFunctions/SaveFunctions.yy",},},
     {"id":{"name":"spr_craft_select","path":"sprites/spr_craft_select/spr_craft_select.yy",},},
     {"id":{"name":"obj_arrow_left","path":"objects/obj_arrow_left/obj_arrow_left.yy",},},
+    {"id":{"name":"obj_notification","path":"objects/obj_notification/obj_notification.yy",},},
     {"id":{"name":"oMouse","path":"objects/oMouse/oMouse.yy",},},
     {"id":{"name":"spr_tree_base_hit","path":"sprites/spr_tree_base_hit/spr_tree_base_hit.yy",},},
     {"id":{"name":"spr_owl","path":"sprites/spr_owl/spr_owl.yy",},},

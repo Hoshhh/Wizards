@@ -90,6 +90,46 @@ if (drop_move and !created_crop)
 			//Destroy item if picked up
 			if (picked_up)
 			{
+				#region Create notification
+				if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
+				
+				var in = item_num;
+				var sn = stack_num;
+				with(obj_notification) {
+					//Create_grid
+					if (!ds_exists(ds_notifications, ds_type_grid)) {
+						ds_notifications = ds_grid_create(2,1);
+						var not_grid = ds_notifications;
+						not_grid[# 0, 0] = sn;
+						not_grid[# 1, 0] = oInventory.item_info[in].iname;
+					} else {
+						//Add to grid
+						event_perform(ev_other, ev_user4);
+						
+						var not_grid = ds_notifications;
+						var grid_height = ds_grid_height(not_grid);
+						var item_name = oInventory.item_info[in].iname;
+						var in_grid = false;
+						
+						var yy = 0; repeat(grid_height) {
+							//If we are already in the grid
+							if (item_name == not_grid[# 1, yy]) {
+								not_grid[# 0, yy] += sn;	
+								in_grid = true;
+								break;
+							}
+							yy++;
+						}
+						
+						if (!in_grid) {
+							ds_grid_resize(not_grid, 2, grid_height+1);
+							not_grid[# 0, grid_height] = sn;
+							not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+						}
+					}
+				}
+				#endregion
+				
 				instance_destroy();
 				show_debug_message("Picked up an item.")
 				pickup_timer = 0;
