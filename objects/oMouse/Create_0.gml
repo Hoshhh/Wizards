@@ -124,6 +124,8 @@ stateDrag = function() {
 		var _shop = instance_nearest(obj_player.x, obj_player.y, oShopContainer);
 		var create_notification = false;
 		
+		itemAmount = inventoryDrag.inventory[slotDrag].amount;
+		
 		//Prevents adding anything to the output slot in furnaces
 		if (inventoryHover == _furnace) {
 			if (slotHover == 1) {
@@ -163,12 +165,16 @@ stateDrag = function() {
 				var sn = inventoryDrag.inventory[slotDrag].amount
 				with(obj_notification) {
 					drop = true;
+					item_num = in; 
+					stack_num = sn; //1		
 					//Create_grid
 					if (!ds_exists(ds_notifications, ds_type_grid)) {
-						ds_notifications = ds_grid_create(2,1);
+						ds_notifications = ds_grid_create(4,1);
 						var not_grid = ds_notifications;
 						not_grid[# 0, 0] = -sn;
 						not_grid[# 1, 0] = oInventory.item_info[in].iname;
+						not_grid[# 2, 0] = in mod (spr_width/cell_size)
+						not_grid[# 3, 0] = in div (spr_width/cell_size);	
 					} else {
 						//Add to grid
 						event_perform(ev_other, ev_user3);
@@ -181,7 +187,9 @@ stateDrag = function() {
 						var yy = 0; repeat(grid_height) {
 							//If we are already in the grid
 							if (item_name == not_grid[# 1, yy]) {
-								not_grid[# 0, yy] = -sn;	
+								not_grid[# 0, yy] = -sn;
+								not_grid[# 2, yy] = in mod (spr_width/cell_size)
+								not_grid[# 3, yy] = in div (spr_width/cell_size);
 								in_grid = true;
 								break;
 							}
@@ -189,9 +197,11 @@ stateDrag = function() {
 						}
 						
 						if (!in_grid) {
-							ds_grid_resize(not_grid, 2, grid_height+1);
+							ds_grid_resize(not_grid, 4, grid_height+1);
 							not_grid[# 0, grid_height] = -sn;
 							not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+							not_grid[# 2, grid_height] = in mod (spr_width/cell_size)
+							not_grid[# 3, grid_height] = in div (spr_width/cell_size);
 						}
 					}
 				}
