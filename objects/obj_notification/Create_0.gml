@@ -9,3 +9,7 @@ draw_set_font(font);
 str_height = string_height("M");
 
 gui_height = display_get_gui_height();
+text = "";
+
+drop = false;
+sell = false;

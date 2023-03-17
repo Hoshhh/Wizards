@@ -12,6 +12,7 @@ with(daycycle) {
 		if (floor(hours) == hours) {
 			//floor(other.total_stock * 0.10);
 			var remainder = 0;
+			var create_notification = false;
 			slot = 0;
 			
 			if (other.inventory[other.slot].itemInSlot == item.none) {	
@@ -22,9 +23,96 @@ with(daycycle) {
 			}
 			
 			if (other.inventory[other.slot].amount >= other.sellsPerHour) {
+				create_notification = true;
+				if (create_notification) {
+					#region Create notification
+					if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
+				
+					var in = other.inventory[other.slot].itemInSlot;
+					var sn = other.sellsPerHour;
+					with(obj_notification) {
+						sell = true;
+						//Create_grid
+						if (!ds_exists(ds_notifications, ds_type_grid)) {
+							ds_notifications = ds_grid_create(2,1);
+							var not_grid = ds_notifications;
+							not_grid[# 0, 0] += sn;
+							not_grid[# 1, 0] = oInventory.item_info[in].iname;
+						} else {
+							//Add to grid
+							event_perform(ev_other, ev_user4);
+						
+							var not_grid = ds_notifications;
+							var grid_height = ds_grid_height(not_grid);
+							var item_name = oInventory.item_info[in].iname;
+							var in_grid = false;
+						
+							var yy = 0; repeat(grid_height) {
+								//If we are already in the grid
+								if (item_name == not_grid[# 1, yy]) {
+									not_grid[# 0, yy] += sn;	
+									in_grid = true;
+									break;
+								}
+								yy++;
+							}
+						
+							if (!in_grid) {
+								ds_grid_resize(not_grid, 2, grid_height+1);
+								not_grid[# 0, grid_height] += sn;
+								not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+							}
+						}
+					}
+					#endregion
+				}
+				
 				other.inventory[other.slot].amount -= other.sellsPerHour;
 				oInventory.currency += other.sellsPerHour * other.inventory[other.slot].sell
 			} else if (other.inventory[other.slot].amount < other.sellsPerHour) {
+				create_notification = true;
+				if (create_notification) {
+					#region Create notification
+					if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
+				
+					var in = other.inventory[other.slot].itemInSlot;
+					var sn = other.inventory[other.slot].amount;
+					with(obj_notification) {
+						sell = true;
+						//Create_grid
+						if (!ds_exists(ds_notifications, ds_type_grid)) {
+							ds_notifications = ds_grid_create(2,1);
+							var not_grid = ds_notifications;
+							not_grid[# 0, 0] += sn;
+							not_grid[# 1, 0] = oInventory.item_info[in].iname;
+						} else {
+							//Add to grid
+							event_perform(ev_other, ev_user4);
+						
+							var not_grid = ds_notifications;
+							var grid_height = ds_grid_height(not_grid);
+							var item_name = oInventory.item_info[in].iname;
+							var in_grid = false;
+						
+							var yy = 0; repeat(grid_height) {
+								//If we are already in the grid
+								if (item_name == not_grid[# 1, yy]) {
+									not_grid[# 0, yy] += sn;	
+									in_grid = true;
+									break;
+								}
+								yy++;
+							}
+						
+							if (!in_grid) {
+								ds_grid_resize(not_grid, 2, grid_height+1);
+								not_grid[# 0, grid_height] += sn;
+								not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+							}
+						}
+					}
+					#endregion
+				}
 				//When the current slot has less than the sells per hour
 				remainder = other.sellsPerHour - other.inventory[other.slot].amount;
 				oInventory.currency += other.inventory[other.slot].amount * other.inventory[other.slot].sell
@@ -43,6 +131,49 @@ with(daycycle) {
 				other.slot += 1;
 				
 				if (other.inventory[other.slot].itemInSlot != item.none) {
+					create_notification = true;
+					if (create_notification) {
+						#region Create notification
+						if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
+				
+						var in = other.inventory[other.slot].itemInSlot;
+						var sn = remainder;
+						with(obj_notification) {
+							sell = true;
+							//Create_grid
+							if (!ds_exists(ds_notifications, ds_type_grid)) {
+								ds_notifications = ds_grid_create(2,1);
+								var not_grid = ds_notifications;
+								not_grid[# 0, 0] += sn;
+								not_grid[# 1, 0] = oInventory.item_info[in].iname;
+							} else {
+								//Add to grid
+								event_perform(ev_other, ev_user4);
+						
+								var not_grid = ds_notifications;
+								var grid_height = ds_grid_height(not_grid);
+								var item_name = oInventory.item_info[in].iname;
+								var in_grid = false;
+						
+								var yy = 0; repeat(grid_height) {
+									//If we are already in the grid
+									if (item_name == not_grid[# 1, yy]) {
+										not_grid[# 0, yy] += sn;	
+										in_grid = true;
+										break;
+									}
+									yy++;
+								}
+						
+								if (!in_grid) {
+									ds_grid_resize(not_grid, 2, grid_height+1);
+									not_grid[# 0, grid_height] += sn;
+									not_grid[# 1, grid_height] = oInventory.item_info[in].iname;
+								}
+							}
+						}
+						#endregion
+					}
 					oInventory.currency += remainder * other.inventory[other.slot].sell;
 					other.inventory[other.slot].amount -= remainder;
 				}

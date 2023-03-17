@@ -7,16 +7,26 @@ draw_set_font(font);
 var yy = 0; repeat(grid_height) {
 	var not_sign = "";
 	if (not_grid[# 0, yy] > 0) { not_sign = "+"; }
-	draw_text_color(
-		100,
-		(gui_height/2)+(yy*(str_height+16))-(grid_height*str_height), 
-		not_sign+string(not_grid[# 0, yy]) + " " + string(not_grid[# 1, yy]),
-		c,c,c,c, not_alpha
-	);
+	
+	if (drop) {
+		draw_text_color(
+			100,
+			(gui_height/2)+(yy*(str_height+16))-(grid_height*str_height), 
+			not_sign+string(not_grid[# 0, yy]) + " " + string(not_grid[# 1, yy]),
+			c,c,c,c, not_alpha
+		);
+	} else if (sell) {
+		draw_text_color(
+			100,
+			(gui_height/2)+(yy*(str_height+16))-(grid_height*str_height), 
+			string(not_grid[# 0, yy]) + " " + string(not_grid[# 1, yy] + " sold"),
+			c,c,c,c, not_alpha
+		);	
+	}
 	
 	yy++;
 }
 
 //Fade Away
-if (fade_away) not_alpha -= 1;
+if (fade_away) not_alpha -= 0.1;
 if (not_alpha <= 0) instance_destroy();

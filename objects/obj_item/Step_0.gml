@@ -96,6 +96,7 @@ if (drop_move and !created_crop)
 				var in = item_num;
 				var sn = stack_num;
 				with(obj_notification) {
+					drop = true;
 					//Create_grid
 					if (!ds_exists(ds_notifications, ds_type_grid)) {
 						ds_notifications = ds_grid_create(2,1);
@@ -104,7 +105,7 @@ if (drop_move and !created_crop)
 						not_grid[# 1, 0] = oInventory.item_info[in].iname;
 					} else {
 						//Add to grid
-						event_perform(ev_other, ev_user4);
+						event_perform(ev_other, ev_user3);
 						
 						var not_grid = ds_notifications;
 						var grid_height = ds_grid_height(not_grid);

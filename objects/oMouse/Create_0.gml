@@ -162,6 +162,7 @@ stateDrag = function() {
 				var in = inventoryDrag.inventory[slotDrag].itemInSlot;
 				var sn = inventoryDrag.inventory[slotDrag].amount
 				with(obj_notification) {
+					drop = true;
 					//Create_grid
 					if (!ds_exists(ds_notifications, ds_type_grid)) {
 						ds_notifications = ds_grid_create(2,1);
@@ -170,7 +171,7 @@ stateDrag = function() {
 						not_grid[# 1, 0] = oInventory.item_info[in].iname;
 					} else {
 						//Add to grid
-						event_perform(ev_other, ev_user4);
+						event_perform(ev_other, ev_user3);
 						
 						var not_grid = ds_notifications;
 						var grid_height = ds_grid_height(not_grid);
@@ -180,7 +181,7 @@ stateDrag = function() {
 						var yy = 0; repeat(grid_height) {
 							//If we are already in the grid
 							if (item_name == not_grid[# 1, yy]) {
-								not_grid[# 0, yy] -= sn;	
+								not_grid[# 0, yy] = -sn;	
 								in_grid = true;
 								break;
 							}
