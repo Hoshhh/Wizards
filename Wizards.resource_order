@@ -11,6 +11,7 @@
     {"name":"Furnace","order":1,"path":"folders/Sprites/Placeables/Furnace.yy",},
     {"name":"Shop","order":2,"path":"folders/Sprites/Placeables/Shop.yy",},
     {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
+    {"name":"Notifications","order":3,"path":"folders/Sprites/UI Elements/Notifications.yy",},
     {"name":"Shop","order":2,"path":"folders/Sprites/UI Elements/Shop.yy",},
   ],
   "ResourceOrderSettings": [
@@ -135,6 +136,7 @@
     {"name":"spr_create_button","order":3,"path":"sprites/spr_create_button/spr_create_button.yy",},
     {"name":"obj_pick","order":3,"path":"objects/obj_pick/obj_pick.yy",},
     {"name":"rock_scripts","order":1,"path":"scripts/rock_scripts/rock_scripts.yy",},
+    {"name":"spr_text_container","order":1,"path":"sprites/spr_text_container/spr_text_container.yy",},
     {"name":"par_depthobject","order":5,"path":"objects/par_depthobject/par_depthobject.yy",},
     {"name":"rm_empty","order":9,"path":"rooms/rm_empty/rm_empty.yy",},
     {"name":"noBuildZone","order":10,"path":"objects/noBuildZone/noBuildZone.yy",},

@@ -18,6 +18,7 @@ draw_set_font(fnt_test)
 if (notification > 0) {
 	draw_text_color(10, 90, "Plants can be watered again!", c,c,c,c, 1);	
 }*/
+/*
 draw_text_color(10,10, "Minutes: " + string(minutes), c,c,c,c, 1);
 draw_text_color(10,50, "Hour: " + string(hours), c,c,c,c, 1);
 draw_text_color(10,90, "Day: " + string(day), c,c,c,c, 1);

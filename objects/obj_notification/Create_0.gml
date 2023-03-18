@@ -20,10 +20,31 @@ ds_notifications = -1;
 
 font = fnt_dialogue;
 draw_set_font(font);
-str_height = string_height("M");
+str_height = 0.2*string_height("M");
 
 gui_height = display_get_gui_height();
 text = "";
 
 drop = false;
 sell = false;
+
+gui_width = display_get_gui_width();
+gui_height = display_get_gui_height();
+
+item_ui_width = 20;
+item_ui_height = 24;
+
+text_ui_width = 24;
+text_ui_height = 24;
+
+spr_item = spr_item_container;
+spr_text = spr_text_container;
+
+not_ui_x = (gui_width * 0.8) - (item_ui_width * 0.5 * scale);
+not_ui_y = (gui_height * 0.9) - (item_ui_height * 0.3 * scale);
+
+item_x = not_ui_x + (4 * scale);
+item_y = not_ui_y + (4 * scale);
+
+text_x = not_ui_x + (25 * scale);
+text_y = not_ui_y + (5 * scale);
