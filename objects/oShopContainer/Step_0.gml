@@ -150,7 +150,7 @@ with(daycycle) {
 					create_notification = true;
 					oInventory.currency += remainder * other.inventory[other.slot].sell;
 					other.inventory[other.slot].amount -= remainder;
-					
+					//
 					if (create_notification) {
 						#region Create notification
 						if (!instance_exists(obj_notification)) { instance_create_layer(0,0, "Instances", obj_notification) }
