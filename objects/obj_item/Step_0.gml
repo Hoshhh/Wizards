@@ -97,6 +97,7 @@ if (drop_move and !created_crop)
 				var sn = stack_num;
 				with(obj_notification) {
 					drop = true;
+					//
 					//Create_grid
 					if (!ds_exists(ds_notifications, ds_type_grid)) {
 						ds_notifications = ds_grid_create(4,1);
