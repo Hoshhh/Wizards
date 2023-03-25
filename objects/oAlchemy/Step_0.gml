@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(ord("I"))) show_alch = !show_alch
+//if (keyboard_check_pressed(ord("I"))) show_alch = !show_alch
 
 if (show_alch) {
 

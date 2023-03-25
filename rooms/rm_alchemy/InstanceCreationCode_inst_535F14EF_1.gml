@@ -1,6 +1,6 @@
 targetRoom = rm_main;
-targetX = 925;
-targetY = 120;
+targetX = 255;
+targetY = 265;
 
 playerFacingBefore = dir.down;
-playerFacingAfter = dir.left;
+playerFacingAfter = dir.down;
