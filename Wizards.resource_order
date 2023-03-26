@@ -13,6 +13,8 @@
     {"name":"Furnace","order":1,"path":"folders/Sprites/UI Elements/Furnace.yy",},
     {"name":"Notifications","order":3,"path":"folders/Sprites/UI Elements/Notifications.yy",},
     {"name":"Shop","order":2,"path":"folders/Sprites/UI Elements/Shop.yy",},
+    {"name":"Crafting Table","order":5,"path":"folders/Objects/Interactables/Placeables/Crafting Table.yy",},
+    {"name":"Crafting Table","order":3,"path":"folders/Sprites/Placeables/Crafting Table.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_run","order":1,"path":"sprites/spr_run/spr_run.yy",},
@@ -139,6 +141,7 @@
     {"name":"spr_text_container","order":1,"path":"sprites/spr_text_container/spr_text_container.yy",},
     {"name":"par_depthobject","order":5,"path":"objects/par_depthobject/par_depthobject.yy",},
     {"name":"rm_empty","order":9,"path":"rooms/rm_empty/rm_empty.yy",},
+    {"name":"obj_crafting_table","order":1,"path":"objects/obj_crafting_table/obj_crafting_table.yy",},
     {"name":"noBuildZone","order":10,"path":"objects/noBuildZone/noBuildZone.yy",},
     {"name":"obj_shelf_small","order":1,"path":"objects/obj_shelf_small/obj_shelf_small.yy",},
     {"name":"snd_voice4","order":1,"path":"sounds/snd_voice4/snd_voice4.yy",},

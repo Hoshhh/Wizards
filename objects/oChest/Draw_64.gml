@@ -2,7 +2,7 @@ var c = c_yellow
 draw_set_font(fnt_smalldigits);
 
 if (!show_chest) exit;
-draw_text_color(x-200, y+30, "Instance id: " + string(id), c,c,c,c, 1)
+//draw_text_color(x-200, y+30, "Instance id: " + string(id), c,c,c,c, 1)
 
 ///draw_text_color(30,250, "button: " + string(button), c,c,c,c, 1);
 

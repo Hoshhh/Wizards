@@ -7,7 +7,7 @@ items_produced = [
 
 spr_tree = -1;
 spr_tree_hit = -1;
-hp = 10;
+hp = 6;
 
 selected = false;
 show_selected = false;

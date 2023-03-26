@@ -5,12 +5,13 @@ if (!show_shop) exit;
 var c = c_yellow
 draw_set_font(fnt_smalldigits);
 
+/*
 draw_text_color(10,210, "_slot: " + string(slot), c,c,c,c, 1);
 
 for (var j = 0; j < shop_slots; j++) {
 	var ydist = 20
 	draw_text_color(300,ydist*j + 10, string(inventory[j]) + "\n", c,c,c,c, 1);
-}
+}*/
 
 
 draw_sprite_part_ext(

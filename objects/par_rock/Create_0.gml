@@ -5,7 +5,7 @@ items_produced = [
 ]
 spr_rock = -1;
 spr_rock_hit = -1;
-hp = 10;
+hp = 6;
 
 selected = false;
 show_selected = false;
