@@ -44,6 +44,10 @@ if (obj != noone) {
 		case item.furnace : 
 			spr = object_get_sprite(obj_furnace)
 		break;
+		
+		case item.craftingtable : 
+			spr = object_get_sprite(obj_crafting_table)
+		break;
 	}	
 
 

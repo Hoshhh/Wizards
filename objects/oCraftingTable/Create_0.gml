@@ -181,3 +181,5 @@ recipe_page1[3] = {
 
 
 recipe_page = recipe_page1;
+
+instance_create_layer(x, y, "Instances", obj_crafting_table)

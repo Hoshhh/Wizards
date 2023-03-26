@@ -134,7 +134,8 @@ enum item {
 	goldbar					= 54,
 	smallshelf				= 55,
 	largeshelf				= 56,
-	height					= 57,
+	craftingtable			= 57,
+	height					= 58,
 }
 
 #region Item Info Array
@@ -539,6 +540,12 @@ item_info[56] = {
 	sell : 0
 }
 
+item_info[57] = {
+	iname : "Crafting Table",
+	quality : 1,
+	obj : oCraftingTable,
+	sell : 0
+}
 
 #endregion
 
@@ -554,11 +561,11 @@ inventory[0] = {
 }
 
 inventory[1] = {
-	itemInSlot	: item.largeshelf,
-	amount		: 10,
-	iname		: "Large Shelf",
+	itemInSlot	: item.craftingtable,
+	amount		: 1,
+	iname		: "Crafting Table",
 	quality		: 1,
-	obj			: oShopContainer,
+	obj			: oCraftingTable,
 	sell		: 0
 }
 
