@@ -123,6 +123,7 @@
     {"name":"spr_painting","order":12,"path":"sprites/spr_painting/spr_painting.yy",},
     {"name":"BuildFurnace","order":2,"path":"scripts/BuildFurnace/BuildFurnace.yy",},
     {"name":"spr_table","order":6,"path":"sprites/spr_table/spr_table.yy",},
+    {"name":"spr_attack","order":8,"path":"sprites/spr_attack/spr_attack.yy",},
     {"name":"string_wrap","order":2,"path":"scripts/string_wrap/string_wrap.yy",},
     {"name":"sh_red","order":1,"path":"shaders/sh_red/sh_red.yy",},
     {"name":"spr_arrow_right","order":4,"path":"sprites/spr_arrow_right/spr_arrow_right.yy",},
