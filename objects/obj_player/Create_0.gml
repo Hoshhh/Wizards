@@ -42,7 +42,8 @@ enum states {
 	free,
 	spell,
 	dialogue,
-	cutscene
+	cutscene,
+	attack,
 }
 
 state = states.free;
@@ -50,6 +51,7 @@ states_array[states.free] = player_free;
 states_array[states.spell] = player_farming_spell;
 states_array[states.dialogue] = player_dialogue;
 states_array[states.cutscene] = player_cutscene;
+states_array[states.attack] = player_attack;
 
 
 #region Shader handles

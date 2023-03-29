@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Spells",
-    "path": "folders/Objects/Spells.yy",
+    "name": "Farming",
+    "path": "folders/Objects/Spells/Farming.yy",
   },
   "parentObjectId": null,
   "persistent": false,

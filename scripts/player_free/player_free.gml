@@ -157,6 +157,17 @@ function player_free(){
 		state = states.cutscene;	
 	}
 	
+	//Temporary combat solution
+	if (keyboard_check_pressed(ord("Q")) and distance_to_object(enemy) < 100 and coolDown < 1) {
+		x_frame = 0;
+		spr = spr_spell_attack;
+		state = states.attack;
+		casting = true;	
+		coolDown = 20;
+	}
+	
+	coolDown--;
+	
 	
 	//Update Sprite
 	switch(facing)

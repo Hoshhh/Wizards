@@ -1,19 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pick",
+  "name": "enemy",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Farming",
-    "path": "folders/Objects/Spells/Farming.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "parentObjectId": {
     "name": "par_depthobject",
@@ -34,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_pick_spawn",
-    "path": "sprites/spr_pick_spawn/spr_pick_spawn.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
