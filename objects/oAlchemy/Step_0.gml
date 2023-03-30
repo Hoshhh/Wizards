@@ -274,7 +274,7 @@ if (selected) {
 		inventory[1].amount = _item2AmountTotal;
 		inventory[2].amount = _item3AmountTotal;
 		
-		if (_item1AmountTotal >= recipe_page[recipe_selected].item1_amount * craft_num+1) {
+		if (_item1AmountTotal >= recipe_page[recipe_selected].item1_amount * (craft_num+1)) {
 			if (mouse_check_button_pressed(mb_left) and add_selected == true) {
 				craft_num++	
 			}
