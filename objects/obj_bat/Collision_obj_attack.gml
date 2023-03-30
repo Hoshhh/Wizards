@@ -1,4 +1,4 @@
-var inst = instance_place(x,y, obj_attack)	;
+var inst = instance_place(x,y, obj_attack);
 	
 hp -= 20;
 flash = 5;

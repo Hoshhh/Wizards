@@ -4,7 +4,7 @@ function player_attack(){
 	coolDown--;
 	spr = spr_attack;
 	
-	var _enemy = instance_nearest(x,y, obj_bat);
+	var _enemy = instance_nearest(x,y, enemy);
 	if (instance_exists(_enemy)) {
 		if (_enemy.x > x) {
 			flip = -1;
