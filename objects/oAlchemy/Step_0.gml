@@ -285,7 +285,6 @@ if (selected) {
 		inventory[2].amount = 0;
 	}
 	
-	//
 	
 	if (crafting and (inventory[3].itemInSlot == recipe_page[recipe_selected].output_type || inventory[3].itemInSlot == item.none) and craft_num > 0) {
 		crafting_timer++;
