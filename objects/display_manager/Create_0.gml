@@ -6,7 +6,7 @@ view_width=round(view_height*aspect_ratio);
 if(view_width & 1) view_width++;
 if(view_height & 1) view_height++;
 
-max_window_scale = min(floor(display_get_width()/view_width),floor(display_get_height()/view_height));
+max_window_scale = 1//min(floor(display_get_width()/view_width),floor(display_get_height()/view_height));
 if(view_height * max_window_scale == display_get_height())
     max_window_scale--;
     
