@@ -25,7 +25,7 @@ draw_set_font(font);
 //Draw Name
 var c = name_text_col;
 draw_set_halign(fa_center); //draw_set_valign(fa_middle);
-draw_text_color(name_text_x, name_text_y, npc_name, c,c,c,c, 1); 
+draw_text_transformed_color(name_text_x, name_text_y, npc_name, 0.115*scale, 0.115*scale, 0, c,c,c,c, 1); 
 draw_set_halign(fa_left); //draw_set_valign(fa_top);
 
 if (!choice_dialogue) {
@@ -47,14 +47,14 @@ if (!choice_dialogue) {
 	var substr = string_copy(text_wrapped, 1, counter);
 
 	c = text_col;
-	draw_text_color(text_x, text_y, substr, c,c,c,c, 1);
+	draw_text_transformed_color(text_x, text_y, substr, 0.2*scale, 0.2*scale, 0, c,c,c,c, 1);
 } else {
 	c = text_col
 	var i = 0, y_add = 0; repeat(text_array_len)
 	{
-		if (choice == i) { c = choice_col; draw_text_color(box_x+text_max_width, text_y+y_add, "<", c,c,c,c, 1); } 
+		if (choice == i) { c = choice_col; draw_text_transformed_color(box_x+text_max_width, text_y+y_add, "<", 0.115*scale, 0.115*scale, 0, c,c,c,c, 1); } 
 			else c = text_col;
-			draw_text_ext_color(text_x, text_y + y_add, text_array[i], text_height, text_max_width, c,c,c,c, 1);
+			draw_text_ext_transformed_color(text_x, text_y + y_add, text_array[i], text_height, text_max_width+1100, 0.115*scale, 0.115*scale, 0, c,c,c,c, 1);
 			y_add += string_height_ext(text_array[i], text_height, text_max_width)
 			i++;
 			

@@ -4,7 +4,7 @@
 function string_wrap(argument0, argument1) {
 
 	var str = argument0;
-	var max_width = argument1;
+	var max_width = argument1+200;
 
 	var str_len = string_length(str)
 	var last_space = 1;

@@ -4,7 +4,7 @@ frame = spr_portrait_frame;
 portrait = spr_portraits;
 namebox = spr_namebox;
 
-scale = display_manager.window_scale;
+scale = 1;
 
 
 box_width = sprite_get_width(box)*scale;
@@ -15,8 +15,8 @@ namebox_width = sprite_get_width(namebox)*scale;
 namebox_height = sprite_get_height(namebox)*scale;
 
 
-port_x = (global.game_width - box_width - port_width ) * 0.5
-port_y = (global.game_height * 0.98) - port_height;
+port_x = (320 - box_width - port_width ) * 0.5
+port_y = (180 * 0.90) - port_height;
 box_x = port_x + (port_width);
 box_y = port_y;
 namebox_x = box_x + (16*scale);

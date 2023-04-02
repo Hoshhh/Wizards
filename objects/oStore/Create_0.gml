@@ -2,7 +2,7 @@ depth = -1;
 scale = 1;
 
 cell_size = 16;
-show_store = false;
+show_store = true;
 
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);
@@ -42,27 +42,37 @@ item_select_y = store_ui_y + (15 * scale);
 //Position for item name text
 item_name_x = store_ui_x + (34 * scale); 
 item1_name_y = store_ui_y + (22 * scale); 
-item2_name_y = store_ui_y + (22 * scale); 
-item3_name_y = store_ui_y + (22 * scale); 
-item4_name_y = store_ui_y + (22 * scale); 
+item2_name_y = store_ui_y + (40 * scale); 
+item3_name_y = store_ui_y + (58 * scale); 
+item4_name_y = store_ui_y + (76 * scale); 
 
 //Position for item stock amount
-item_stock_x = store_ui_x + (99 * scale); 
-item_stock_y = store_ui_y + (22 * scale); 
+item_stock_x = store_ui_x + (102 * scale); 
+item1_stock_y = store_ui_y + (22 * scale); 
+item2_stock_y = store_ui_y + (40 * scale); 
+item3_stock_y = store_ui_y + (58 * scale); 
+item4_stock_y = store_ui_y + (76 * scale); 
 
 //Button locations that set the amount to craft
 sub_button_x = store_ui_x + (115 * scale);
-sub_button_y = store_ui_y + (119 * scale);
-sub_selected_x = store_ui_x + (114 * scale);
-sub_selected_y = store_ui_y + (118 * scale);
-sub_selected = false;
+sub1_button_y = store_ui_y + (19 * scale);
+sub2_button_y = store_ui_y + (38 * scale);
+sub3_button_y = store_ui_y + (57 * scale);
+sub4_button_y = store_ui_y + (76 * scale);
+
+sub_select_x = store_ui_x + (114 * scale);
+sub_select_y = store_ui_y + (18 * scale);
+sub_select = 0;
 
 add_button_x = store_ui_x + (142 * scale);
-add_button_y = store_ui_y + (119 * scale);
-add_selected_x = store_ui_x + (141 * scale);
-add_selected_y = store_ui_y + (118 * scale);
-add_selected = false;
-height_buffer = 19
+add1_button_y = store_ui_y + (19 * scale);
+add2_button_y = store_ui_y + (38 * scale);
+add3_button_y = store_ui_y + (57 * scale);
+add4_button_y = store_ui_y + (76 * scale);
+
+add_select_x = store_ui_x + (141 * scale);
+add_select_y = store_ui_y + (18 * scale);
+add_select = 0;
 
 //Purchase button coords
 purchase_button_x = store_ui_x + (66 * scale);
@@ -72,8 +82,11 @@ purchase_selected_y = store_ui_y + (90 * scale);
 purchase_selected = false;
 
 //Position for amount to purchase
-num_x = store_ui_x + (130 * scale);
-num_y = store_ui_y + (22 * scale);
+num_x = store_ui_x + (133 * scale);
+num1_y = store_ui_y + (22 * scale);
+num2_y = store_ui_y + (40 * scale);
+num3_y = store_ui_y + (58 * scale);
+num4_y = store_ui_y + (76 * scale);
 item1_num = 0;
 item2_num = 0;
 item3_num = 0;
