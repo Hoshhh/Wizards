@@ -1,7 +1,7 @@
 alchemy_slots = 4
 input_select = mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0, gp_face1)
 depth = -1;
-scale = display_manager.window_scale;
+scale = 1;
 
 cell_size = 16;
 alch_slots_width = 4;

@@ -1,6 +1,6 @@
 furn_slots = 2;
 depth = -1;
-scale = display_manager.window_scale*0.9;
+scale = 1;
 
 cell_size = 16;
 furn_slots_width = 1;
@@ -34,7 +34,7 @@ spr_furn_items = spr_inventory_items;
 spr_furn_items_columns = sprite_get_width(spr_furn_items)/cell_size;
 spr_furn_items_rows = sprite_get_height(spr_furn_items)/cell_size;
 
-furn_ui_x = (gui_width * 0.85) - (furn_ui_width * 0.5 * scale);
+furn_ui_x = (gui_width * 0.80) - (furn_ui_width * 0.5 * scale);
 furn_ui_y = (gui_height * 0.5) - (furn_ui_height * 0.5 * scale);
 
 slots_x = furn_ui_x + (18 * scale);

@@ -1,6 +1,6 @@
 shop_slots = 6;
 depth = -1;
-scale = display_manager.window_scale*0.9;
+scale = 1;
 
 obj = -1;
 

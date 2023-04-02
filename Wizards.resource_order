@@ -93,6 +93,7 @@
     {"name":"obj_books","order":2,"path":"objects/obj_books/obj_books.yy",},
     {"name":"obj_shelf03","order":9,"path":"objects/obj_shelf03/obj_shelf03.yy",},
     {"name":"spr_shop_ui","order":2,"path":"sprites/spr_shop_ui/spr_shop_ui.yy",},
+    {"name":"rm_test","order":10,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"spr_yellow_potion","order":4,"path":"sprites/spr_yellow_potion/spr_yellow_potion.yy",},
     {"name":"cutscene_play_sound","order":3,"path":"scripts/cutscene_play_sound/cutscene_play_sound.yy",},
     {"name":"spr_select_item","order":2,"path":"sprites/spr_select_item/spr_select_item.yy",},

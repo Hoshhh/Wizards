@@ -1,6 +1,6 @@
 INVENTORY_SLOTS  = 15;
 depth = -1;
-scale = display_manager.window_scale*0.9;
+scale = 1;
 
 cell_size = 16;
 inv_slots_width = 5;
@@ -622,7 +622,7 @@ var yy = 6; repeat(INVENTORY_SLOTS)
 
 //Hotbar
 #region Toolbar
-bar_scale = display_manager.window_scale*0.8
+bar_scale = 1;
 show_toolbar = true;
 mouse_in_toolbar = false;
 

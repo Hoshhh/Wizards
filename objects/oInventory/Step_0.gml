@@ -230,41 +230,8 @@ if (instance_exists(chest_inst) and chest_inst.show_chest == true) {
 
 	currency_x = inv_ui_x + (6 * scale);
 	currency_y = inv_ui_y + (76 * scale);
-} else {
-	inv_ui_x = (gui_width * 0.5) - (inv_ui_width * 0.5 * scale);	
-
-	slots_x = inv_ui_x + (55 * scale);
-	slots_y = inv_ui_y + (7 * scale);
-	
-	select_x = inv_ui_x + (53 * scale);
-	select_y = inv_ui_y + (5 * scale);
-	
-	//Drawing position based on "centered" alignment
-	draw_button_x = inv_ui_x + (163 * scale); 
-	draw_button1_y = inv_ui_y + (8 * scale);
-	draw_button2_y = inv_ui_y + (18 * scale);
-	draw_button3_y = inv_ui_y + (28 * scale);
-
-	//Gui position for the top left x,y values for the buttons
-	button_x = inv_ui_x + (157 * scale);
-	button1_y = inv_ui_y + (7 * scale);
-	button2_y = inv_ui_y + (17 * scale);
-	button3_y = inv_ui_y + (27 * scale);
-	
-	buttons_x = inv_ui_x + (155 * scale);
-	buttons_y = inv_ui_y + (2 * scale);
-	
-	//Gui position for player info (currency/name)
-	name_x = inv_ui_x + (6 * scale);
-	name_y = inv_ui_y + (66 * scale);
-
-	currency_x = inv_ui_x + (6 * scale);
-	currency_y = inv_ui_y + (76 * scale);
-}
-
-/*
-if (instance_exists(furn_inst) and furn_inst.show_furn == true) {
-	inv_ui_x = (gui_width * 0.32) - (inv_ui_width * 0.5 * scale);	
+} else if (instance_exists(furn_inst) and furn_inst.show_furn == true) {
+	inv_ui_x = (gui_width * 0.4) - (inv_ui_width * 0.5 * scale);	
 	
 	info_x = inv_ui_x;
 	info_y = inv_ui_y + (57 * scale);

@@ -1,4 +1,4 @@
-scale = display_manager.window_scale*0.9;
+scale = 1;
 cell_size = 16;
 item_spr = spr_inventory_items;
 spr_width = sprite_get_width(item_spr);

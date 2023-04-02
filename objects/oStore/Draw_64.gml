@@ -3,8 +3,8 @@ draw_set_font(fnt_smalldigits);
 
 if (!show_store) exit;
 
-draw_text_color(10,5, "item_x: " + string(testx), c,c,c,c, 1);
-draw_text_color(10,15, "item1_y: " + string(testy), c,c,c,c, 1);
+draw_text_color(10,5, "gw: " + string(global.game_width), c,c,c,c, 1);
+draw_text_color(10,15, "gh: " + string(global.game_height), c,c,c,c, 1);
 
 draw_sprite_part_ext(
 	spr_ui, 0, 0, 0, store_ui_width, store_ui_height, 
