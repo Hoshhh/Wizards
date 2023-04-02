@@ -71,7 +71,7 @@ test = -1;
 testx = -1;
 testy = -1;
 
-currency = 10000;
+currency = 100;
 name = ""
 
 //-------Items
