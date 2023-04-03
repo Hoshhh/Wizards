@@ -52,22 +52,30 @@ var sub4_mousey = mousey - sub4_button_y
 
 if ((sub_mousex >= 0 and sub_mousex <= 10*scale) and (sub1_mousey >= 0 and sub1_mousey <= 9*scale)) {
 	sub_select = 0;
-	if (sub_select == 0 and mouse_check_button_pressed(mb_left) and item1_num > 0) {
+	if (sub_select == 0 and mouse_check_button_pressed(mb_left) and item1_num >= 10) {
+		item1_num -= 10;
+	} else if (sub_select == 0 and mouse_check_button_pressed(mb_left) and item1_num > 0) {
 		item1_num--;
 	}
 } else if ((sub_mousex >= 0 and sub_mousex <= 10*scale) and (sub2_mousey >= 0 and sub2_mousey <= 9*scale)) {
 	sub_select = 1;
-	if (sub_select == 1 and mouse_check_button_pressed(mb_left) and item2_num > 0) {
+	if (sub_select == 1 and mouse_check_button_pressed(mb_left) and item2_num >= 10) {
+		item2_num -= 10;
+	} else if (sub_select == 1 and mouse_check_button_pressed(mb_left) and item2_num > 0) {
 		item2_num--;
 	}
 } else if ((sub_mousex >= 0 and sub_mousex <= 10*scale) and (sub3_mousey >= 0 and sub3_mousey <= 9*scale)) {
 	sub_select = 2;
-	if (sub_select == 2 and mouse_check_button_pressed(mb_left) and item3_num > 0) {
+	if (sub_select == 2 and mouse_check_button_pressed(mb_left) and item3_num >= 10) {
+		item3_num -= 10;
+	} else if (sub_select == 2 and mouse_check_button_pressed(mb_left) and item3_num > 0) {
 		item3_num--;
 	}
 } else if ((sub_mousex >= 0 and sub_mousex <= 10*scale) and (sub4_mousey >= 0 and sub4_mousey <= 9*scale)) {
 	sub_select = 3;
-	if (sub_select == 3 and mouse_check_button_pressed(mb_left) and item4_num > 0) {
+	if (sub_select == 3 and mouse_check_button_pressed(mb_left) and item4_num >= 10) {
+		item4_num -= 10;
+	} else if (sub_select == 3 and mouse_check_button_pressed(mb_left) and item4_num > 0) {
 		item4_num--;
 	}
 } else {
