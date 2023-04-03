@@ -45,6 +45,16 @@ function InventoryAdd(rootObject, itemType, _amount) {
 	} else return false;
 }
 
+function InventoryAddStack(rootObject, itemType, _amount) {
+	var _slot = InventorySearch(rootObject, itemType);
+	if (_slot != -1) {
+		with(rootObject) {
+			inventory[_slot].amount += _amount;
+		}
+		return true;
+	} else return false;
+}
+
 function InventorySwap(objectFrom, slotFrom, objectTo, slotTo) {
 	var _itemFrom = objectFrom.inventory[slotFrom]
 	objectFrom.inventory[slotFrom] = objectTo.inventory[slotTo];
@@ -52,19 +62,22 @@ function InventorySwap(objectFrom, slotFrom, objectTo, slotTo) {
 }
 
 function InventoryStack(rootObject, itemType, _slotFrom, _slotTo) {
-	rootObject.inventory[_slotTo].itemInSlot = itemType;
-	rootObject.inventory[_slotTo].amount += rootObject.inventory[_slotFrom].amount;
-	rootObject.inventory[_slotTo].iname = rootObject.inventory[_slotFrom].iname;	
-	rootObject.inventory[_slotTo].quality = rootObject.inventory[_slotFrom].quality;
-	rootObject.inventory[_slotTo].obj = rootObject.inventory[_slotFrom].obj;
-	rootObject.inventory[_slotTo].sell = rootObject.inventory[_slotFrom].sell;
+	var _slot = InventorySearch(rootObject, itemType);
+	if (_slot != -1) {
+		rootObject.inventory[_slotTo].itemInSlot = itemType;
+		rootObject.inventory[_slotTo].amount += rootObject.inventory[_slotFrom].amount;
+		rootObject.inventory[_slotTo].iname = rootObject.inventory[_slotFrom].iname;	
+		rootObject.inventory[_slotTo].quality = rootObject.inventory[_slotFrom].quality;
+		rootObject.inventory[_slotTo].obj = rootObject.inventory[_slotFrom].obj;
+		rootObject.inventory[_slotTo].sell = rootObject.inventory[_slotFrom].sell;
 	
-	rootObject.inventory[_slotFrom].itemInSlot = -1;
-	rootObject.inventory[_slotFrom].amount -= rootObject.inventory[_slotFrom].amount;
-	rootObject.inventory[_slotFrom].iname = "";	
-	rootObject.inventory[_slotFrom].quality = 0;
-	rootObject.inventory[_slotFrom].obj = noone;
-	rootObject.inventory[_slotFrom].obj = 0;
+		rootObject.inventory[_slotFrom].itemInSlot = -1;
+		rootObject.inventory[_slotFrom].amount -= rootObject.inventory[_slotFrom].amount;
+		rootObject.inventory[_slotFrom].iname = "";	
+		rootObject.inventory[_slotFrom].quality = 0;
+		rootObject.inventory[_slotFrom].obj = noone;
+		rootObject.inventory[_slotFrom].sell = 0;
+	}
 }
 
 function InventoryToOtherStack(objectFrom, slotFrom, objectTo, slotTo) {

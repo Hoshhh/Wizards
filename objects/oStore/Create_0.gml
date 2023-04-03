@@ -77,9 +77,7 @@ add_select = 0;
 //Purchase button coords
 purchase_button_x = store_ui_x + (66 * scale);
 purchase_button_y = store_ui_y + (91 * scale);
-purchase_selected_x = store_ui_x + (65 * scale);
-purchase_selected_y = store_ui_y + (90 * scale);
-purchase_selected = false;
+purchase_select = 0;
 
 //Position for amount to purchase
 num_x = store_ui_x + (133 * scale);

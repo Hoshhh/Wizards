@@ -3,8 +3,8 @@ draw_set_font(fnt_smalldigits);
 
 if (!show_store) exit;
 
-draw_text_color(10,5, "mx: " + string(testx), c,c,c,c, 1);
-draw_text_color(10,15, "my: " + string(testy), c,c,c,c, 1);
+draw_text_color(10,5, "needed: " + string(testx), c,c,c,c, 1);
+draw_text_color(10,15, "available: " + string(testy), c,c,c,c, 1);
 
 draw_sprite_part_ext(
 	spr_ui, 0, 0, 0, store_ui_width, store_ui_height, 
@@ -17,6 +17,8 @@ var add_select_xx = add_select_x;
 var add_select_yy = add_select_y + (18*add_select*scale);
 var sub_select_xx = sub_select_x;
 var sub_select_yy = sub_select_y + (18*sub_select*scale);
+var p_select_xx = purchase_button_x;
+var p_select_yy = purchase_button_y;
 
 if (select >= 0) {
 	draw_sprite_ext(spr_select_item,0, item_select_xx, item_select_yy, scale, scale, 0, c_white, 1);
@@ -30,6 +32,9 @@ if (sub_select >= 0) {
 	draw_sprite_ext(spr_select_small,0, sub_select_xx, sub_select_yy, scale, scale, 0, c_white, 1);
 }
 
+if (purchase_select > 0) {
+	draw_sprite_ext(spr_select_purchase,0, p_select_xx, p_select_yy, scale, scale, 0, c_white, 1);
+} 
 
 //For the items per page
 for (var i = 0; i < array_length(stock_page); i++) {
