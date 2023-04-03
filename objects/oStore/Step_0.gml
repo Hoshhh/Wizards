@@ -81,53 +81,81 @@ if ((sub_mousex >= 0 and sub_mousex <= 10*scale) and (sub1_mousey >= 0 and sub1_
 
 
 var _total = (item1_num * stock_page[0].item_price) + (item2_num * stock_page[1].item_price) + (item3_num * stock_page[2].item_price) + (item4_num * stock_page[3].item_price)
-
+testx = _total;
 if (_total <= oInventory.currency) {
 	var _items = array_create(4,0);
 	var spots_needed = 0;
 	#region Add purchase amounts
+	//Item1
 	if (add_select == 0 and mouse_check_button_pressed(mb_left)) {
-		var empty = InventorySearch(oInventory, item.none)
-		if (empty > -1 and item1_num <= stock_page[add_select].item_amount) {
-			item1_num++;
+		if (keyboard_check(vk_shift)) {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and ((item1_num+10) <= stock_page[add_select].item_amount) and (_total + (stock_page[add_select].item_price * 10) <= oInventory.currency)) {
+				item1_num += 10;
+			}	
+		} else {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and (item1_num < stock_page[add_select].item_amount) and (_total + stock_page[add_select].item_price <= oInventory.currency)) {
+				item1_num++;
+			}
 		}
 	}
 	
 	if (add_select == 1 and mouse_check_button_pressed(mb_left)) {
-		var empty = InventorySearch(oInventory, item.none)
-		if (empty > -1 and item3_num <= stock_page[add_select].item_amount) {
-			item2_num++;
+		if (keyboard_check(vk_shift)) {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and ((item2_num+10) <= stock_page[add_select].item_amount) and (_total + (stock_page[add_select].item_price * 10) <= oInventory.currency)) {
+				item2_num += 10;
+			}	
+		} else {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and (item2_num < stock_page[add_select].item_amount) and (_total + stock_page[add_select].item_price <= oInventory.currency)) {
+				item2_num++;
+			}
 		}
 	}
 
 	if (add_select == 2 and mouse_check_button_pressed(mb_left)) {
-		var empty = InventorySearch(oInventory, item.none)
-		if (empty > -1 and item3_num <= stock_page[add_select].item_amount) {
-			item3_num++;
+		if (keyboard_check(vk_shift)) {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and ((item3_num+10) <= stock_page[add_select].item_amount) and (_total + (stock_page[add_select].item_price * 10) <= oInventory.currency)) {
+				item3_num += 10;
+			}	
+		} else {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and (item3_num < stock_page[add_select].item_amount) and (_total + stock_page[add_select].item_price <= oInventory.currency)) {
+				item3_num++;
+			}
 		}
 	}
 	
 	if (add_select == 3 and mouse_check_button_pressed(mb_left)) {
-		var empty = InventorySearch(oInventory, item.none)
-		if (empty > -1 and item3_num <= stock_page[add_select].item_amount) {
-			item4_num++;
+		if (keyboard_check(vk_shift)) {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and ((item4_num+10) <= stock_page[add_select].item_amount) and (_total + (stock_page[add_select].item_price * 10) <= oInventory.currency)) {
+				item4_num += 10;
+			}	
+		} else {
+			var empty = InventorySearch(oInventory, item.none)
+			if (empty > -1 and (item4_num < stock_page[add_select].item_amount) and (_total + stock_page[add_select].item_price <= oInventory.currency)) {
+				item4_num++;
+			}
 		}
 	}
 	#endregion
 	
 	#region check for how many different items the player is attempting to purchase
 	
-	if ( item1_num > 0) { _total[0] = 1; } else { _total[0] = 0; }
-	if ( item2_num > 0) { _total[1] = 1; } else { _total[1] = 0; }
-	if ( item3_num > 0) { _total[2] = 1; } else { _total[2] = 0; }
-	if ( item4_num > 0) { _total[3] = 1; } else { _total[3] = 0; }
+	if ( item1_num > 0) { _items[0] = 1; } else { _items[0] = 0; }
+	if ( item2_num > 0) { _items[1] = 1; } else { _items[1] = 0; }
+	if ( item3_num > 0) { _items[2] = 1; } else { _items[2] = 0; }
+	if ( item4_num > 0) { _items[3] = 1; } else { _items[3] = 0; }
 	
-	for (var i = 0; i < array_length(_total); i++) {
-		if (_total[i] == 1) {
+	for (var i = 0; i < array_length(_items); i++) {
+		if (_items[i] == 1) {
 			spots_needed += 1;	
-			testx = spots_needed;
 		}
 	}
-	
 	#endregion
 }
+testy = add_select;
