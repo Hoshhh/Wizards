@@ -100,7 +100,6 @@ if ((p_mousex >= 0 and p_mousex <= 27*scale) and (p_mousey >= 0 and p_mousey <= 
 
 
 var _total = (item1_num * stock_page[0].item_price) + (item2_num * stock_page[1].item_price) + (item3_num * stock_page[2].item_price) + (item4_num * stock_page[3].item_price)
-//testx = _total;
 if (_total <= oInventory.currency) {
 	var _items = array_create(4,0);
 	var spots_needed = 0;
@@ -194,9 +193,15 @@ if (_total <= oInventory.currency) {
 					
 					if (_exists) {
 						InventoryAddStack(oInventory, stock_page[0].item_type, item1_num);
+						
+						//Notify player
+						AddNoti(stock_page[0].item_type, item1_num)
 						oInventory.currency -= stock_page[0].item_price * item1_num;
 					} else {
 						InventoryAdd(oInventory, stock_page[0].item_type, item1_num);
+						
+						//Notify player
+						AddNoti(stock_page[0].item_type, item1_num)
 						oInventory.currency -= stock_page[0].item_price * item1_num;
 					}
 				}
@@ -206,9 +211,15 @@ if (_total <= oInventory.currency) {
 					
 					if (_exists) {
 						InventoryAddStack(oInventory, stock_page[1].item_type, item2_num);
+						
+						//Notify player
+						AddNoti(stock_page[1].item_type, item2_num)
 						oInventory.currency -= stock_page[1].item_price * item2_num;
 					} else {
 						InventoryAdd(oInventory, stock_page[1].item_type, item2_num);
+						
+						//Notify player
+						AddNoti(stock_page[1].item_type, item2_num)
 						oInventory.currency -= stock_page[1].item_price * item2_num;
 					}
 				}
@@ -218,9 +229,15 @@ if (_total <= oInventory.currency) {
 					
 					if (_exists) {
 						InventoryAddStack(oInventory, stock_page[2].item_type, item3_num);
+						
+						//Notify player
+						AddNoti(stock_page[2].item_type, item3_num)
 						oInventory.currency -= stock_page[2].item_price * item3_num;
 					} else {
 						InventoryAdd(oInventory, stock_page[2].item_type, item3_num);
+						
+						//Notify player
+						AddNoti(stock_page[2].item_type, item3_num)
 						oInventory.currency -= stock_page[2].item_price * item3_num;
 					}
 				}
@@ -230,9 +247,15 @@ if (_total <= oInventory.currency) {
 					
 					if (_exists) {
 						InventoryAddStack(oInventory, stock_page[3].item_type, item4_num);
+						
+						//Notify player
+						AddNoti(stock_page[3].item_type, item4_num)
 						oInventory.currency -= stock_page[3].item_price * item4_num;
 					} else {
 						InventoryAdd(oInventory, stock_page[3].item_type, item4_num);
+						
+						//Notify player
+						AddNoti(stock_page[3].item_type, item4_num)
 						oInventory.currency -= stock_page[3].item_price * item4_num;
 					}
 				}
