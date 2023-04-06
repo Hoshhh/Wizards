@@ -2,7 +2,7 @@ depth = -1;
 scale = 1;
 
 cell_size = 16;
-show_store = true;
+show_store = false;
 
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);

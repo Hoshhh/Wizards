@@ -18,6 +18,7 @@
     {"name":"Dialogue","order":2,"path":"folders/Sprites/Dialogue.yy",},
     {"name":"Enemies","order":13,"path":"folders/Sprites/Enemies.yy",},
     {"name":"Interactable","order":3,"path":"folders/Sprites/Interactable.yy",},
+    {"name":"Lootable Chests","order":4,"path":"folders/Sprites/Interactable/Lootable Chests.yy",},
     {"name":"Tree Animations","order":1,"path":"folders/Sprites/Interactable/Tree Animations.yy",},
     {"name":"Meta","order":4,"path":"folders/Sprites/Meta.yy",},
     {"name":"NPCs","order":5,"path":"folders/Sprites/NPCs.yy",},
@@ -34,7 +35,6 @@
     {"name":"Notifications","order":3,"path":"folders/Sprites/UI Elements/Notifications.yy",},
     {"name":"Player Shop","order":2,"path":"folders/Sprites/UI Elements/Player Shop.yy",},
     {"name":"Store","order":4,"path":"folders/Sprites/UI Elements/Store.yy",},
-    {"name":"Lootable Chests","order":4,"path":"folders/Sprites/Interactable/Lootable Chests.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_run","order":1,"path":"sprites/spr_run/spr_run.yy",},
@@ -65,6 +65,7 @@
     {"name":"spr_books","order":8,"path":"sprites/spr_books/spr_books.yy",},
     {"name":"spr_chest01_open","order":1,"path":"sprites/spr_chest01_open/spr_chest01_open.yy",},
     {"name":"obj_namebox","order":6,"path":"objects/obj_namebox/obj_namebox.yy",},
+    {"name":"obj_chest_lootable","order":4,"path":"objects/obj_chest_lootable/obj_chest_lootable.yy",},
     {"name":"obj_tree_red","order":4,"path":"objects/obj_tree_red/obj_tree_red.yy",},
     {"name":"spr_rock_base_hit","order":1,"path":"sprites/spr_rock_base_hit/spr_rock_base_hit.yy",},
     {"name":"obj_shelf01","order":1,"path":"objects/obj_shelf01/obj_shelf01.yy",},
