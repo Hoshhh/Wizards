@@ -47,15 +47,15 @@ if (!choice_dialogue) {
 	var substr = string_copy(text_wrapped, 1, counter);
 
 	c = text_col;
-	draw_text_transformed_color(text_x, text_y, substr, 0.2*scale, 0.2*scale, 0, c,c,c,c, 1);
+	draw_text_transformed_color(text_x, text_y, substr, 0.18*scale, 0.18*scale, 0, c,c,c,c, 1);
 } else {
 	c = text_col
 	var i = 0, y_add = 0; repeat(text_array_len)
 	{
-		if (choice == i) { c = choice_col; draw_text_transformed_color(box_x+text_max_width, text_y+y_add, "<", 0.115*scale, 0.115*scale, 0, c,c,c,c, 1); } 
+		if (choice == i) { c = choice_col; draw_text_transformed_color(box_x+text_max_width, text_y+y_add, "<", 0.18*scale, 0.18*scale, 0, c,c,c,c, 1); } 
 			else c = text_col;
-			draw_text_ext_transformed_color(text_x, text_y + y_add, text_array[i], text_height, text_max_width+1100, 0.115*scale, 0.115*scale, 0, c,c,c,c, 1);
-			y_add += string_height_ext(text_array[i], text_height, text_max_width)
+			draw_text_ext_transformed_color(text_x, text_y + y_add, text_array[i], text_height, text_max_width+650, 0.18*scale, 0.18*scale, 0, c,c,c,c, 1);
+			y_add += string_height_ext(text_array[i], text_height, text_max_width-650)
 			i++;
 			
 	}

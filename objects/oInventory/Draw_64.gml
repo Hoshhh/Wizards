@@ -2,7 +2,8 @@ if (room == rm_creator) exit;
 if (instance_exists(obj_cutscene)) exit;
 
 var c = c_yellow
-//draw_text_color(10,200, "selected_slot: " + string(selected_slot), c,c,c,c, 1);
+//draw_text_color(10,10, "mousex: " + string(mousex), c,c,c,c, 1);
+//draw_text_color(10,30, "mousey: " + string(mousey), c,c,c,c, 1);
 
 #region Toolbar
 

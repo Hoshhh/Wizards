@@ -2,6 +2,9 @@ seconds = 21600;
 minutes = 3600;
 hours = 6;
 
+mousex = -1
+mousey = -1;
+
 day = 1;
 season = 1;
 year = 1;

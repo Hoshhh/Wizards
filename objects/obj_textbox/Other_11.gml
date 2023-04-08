@@ -4,7 +4,7 @@ port_index = portraits[page];
 
 if (!is_array(text[page]))
 {
-	text_wrapped = string_wrap(text[page], text_max_width);
+	text_wrapped = string_wrap(text[page], text_max_width+650);
 	str_len = string_length(text_wrapped);
 	choice_dialogue = false;
 }
