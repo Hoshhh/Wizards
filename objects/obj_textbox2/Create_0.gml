@@ -1,3 +1,4 @@
+//Can Edit
 //Input
 confirm_key = vk_space;
 
@@ -17,3 +18,40 @@ text_speed = 0.6;
 text_x = padding;
 text_y = padding;
 text_width = width - padding*2;
+
+
+//Do not edit
+actions = [];
+current_action = -1;
+
+text = "";
+text_progress = 0;
+text_length = 0;
+
+
+//Methods
+
+//Start a conversation
+setTopic = function(topic) {
+	actions = global.topics[$ topic];
+	current_action = -1;
+	
+	next();
+}
+
+//Move to the next action, or close the textbox if out of actions
+next = function() {
+	current_action++;
+	if (current_action >= array_length(actions)) {
+		instance_destroy();	
+	} else {
+		actions[current_action].act(id);	
+	}
+}
+
+//Set the text that should be typed out
+setText = function(newText) {
+	text = newText;
+	text_length = string_length(newText);
+	text_progress = 0;
+}
