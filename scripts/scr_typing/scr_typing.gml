@@ -35,7 +35,7 @@ function type(x, y, text, progress, width) {
 					
 				//if the current word extends past the boundary,
 				//then move it to the next line
-				word_width += string_width(word_char);
+				word_width += string_width(word_char)*0.25;
 				if (draw_x + word_width > width) {
 					draw_x = 0;
 					draw_y += string_height("A")*0.25;
