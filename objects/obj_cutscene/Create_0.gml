@@ -2,7 +2,7 @@ scene_info = -1;
 scene = 0;
 
 
-black_bar_size_max = display_manager.window_scale * 16;
+black_bar_size_max = 16;
 black_bar_size = 0;
 
 timer = 0;

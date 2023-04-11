@@ -59,6 +59,7 @@ function OptionAction(_text, _topic): DialogueAction() constructor {
 	topic = _topic;
 
 	act = function(textbox) {
+		textbox.setText(text);
 		textbox.setTopic(topic);
 	}
 }

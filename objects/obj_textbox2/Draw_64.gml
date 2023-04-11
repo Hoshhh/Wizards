@@ -67,7 +67,7 @@ if (finished && option_count > 0) {
 			draw_sprite(spr_indicator, 0, opt_x + option_text_x-8, opt_y + (text_y*2 + 4));
 		}
 		
-		//type(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, text_progress, draw_text_width+50);
+		//type(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, text_progress, draw_text_width+500);
 		//draw_sprite_stretched(spr_name_bg, 0, opt_x + option_text_x - 4, opt_y + (text_y*2 + 4) - option_height / 2, option_w+8, option_height);
 		draw_text_transformed(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, 0.25, 0.25, 0);
 	}
