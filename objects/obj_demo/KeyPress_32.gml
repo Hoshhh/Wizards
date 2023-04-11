@@ -1,1 +1,1 @@
-startDialogue("Good Morning");
+startDialogue("Breakfast");

@@ -1,6 +1,8 @@
 //Can Edit
 //Input
 confirm_key = vk_space;
+up_key = ord("W");
+down_key = ord("S");
 max_input_delay = 5;
 input_delay = max_input_delay;
 
@@ -11,14 +13,14 @@ width = display_get_gui_width() - margin*16;
 height = sprite_height;
 
 x = (display_get_gui_width() - width) / 2;
-y = display_get_gui_height() - height - margin;
+y = display_get_gui_height() - height - margin+6;
 
 //Text
 text_font = fnt_dialogue;
 text_color = c_white;
 text_speed = 0.6;
 text_x = padding;
-text_y = padding * 2;
+text_y = padding;
 text_width = width - padding*2;
 
 //Portrait
@@ -31,6 +33,15 @@ speaker_y = 0;
 speaker_font = fnt_dialogue;
 speaker_color = c_white;
 
+//Option 
+option_x = padding;
+option_y = padding * 2;
+option_spacing = 12;
+option_selection_indent = 12;
+option_width = sprite_get_width(spr_name_bg);
+option_height = sprite_get_height(spr_name_bg);
+option_text_x = 45;
+option_text_color = c_yellow;
 
 //Do not edit
 actions = [];
@@ -53,6 +64,10 @@ enum PORTRAIT_SIDE {
 speaker_name = ""
 speaker_width = sprite_get_width(spr_name_bg);
 speaker_height = sprite_get_height(spr_name_bg);
+
+options = [];
+current_option = 0;
+option_count = 0;
 
 //Methods
 

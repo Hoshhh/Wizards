@@ -111,6 +111,7 @@
     {"name":"fnt_sidebutton","order":1,"path":"fonts/fnt_sidebutton/fnt_sidebutton.yy",},
     {"name":"obj_books","order":2,"path":"objects/obj_books/obj_books.yy",},
     {"name":"obj_shelf03","order":9,"path":"objects/obj_shelf03/obj_shelf03.yy",},
+    {"name":"spr_indicator","order":5,"path":"sprites/spr_indicator/spr_indicator.yy",},
     {"name":"spr_shop_ui","order":2,"path":"sprites/spr_shop_ui/spr_shop_ui.yy",},
     {"name":"rm_test","order":10,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"spr_yellow_potion","order":4,"path":"sprites/spr_yellow_potion/spr_yellow_potion.yy",},

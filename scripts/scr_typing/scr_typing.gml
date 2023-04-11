@@ -45,7 +45,7 @@ function type(x, y, text, progress, width) {
 		} else {
 			//Draw the letter
 			draw_text_transformed(x + draw_x, y + draw_y, char, 0.25, 0.25, 0);
-			draw_x += string_width(char)*0.255;
+			draw_x += string_width(char)*0.25;
 		}
 	}
 }

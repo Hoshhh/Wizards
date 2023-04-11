@@ -102,33 +102,16 @@ function player_free(){
 	
 	//Collisions with NPCs
 	//Text Box
-	if (input_interact)
-	{
-		if (active_textbox == noone)
-		{
-			var inst = collision_rectangle(x-radius, y-radius, x+radius, y+radius, par_npc, false, false);
+	if (input_interact) {
+		var inst = collision_rectangle(x-radius, y-radius, x+radius, y+radius, par_npc, false, false);
 	
-			if (inst != noone)
-			{
-				with(inst)
-				{
-					var tbox = create_textbox(text, speakers, next_line, scripts);
-					can_move = false;
-					moveX = 0; moveY = 0;
-					change_variable(display_manager, "target", id);
-				}
-				active_textbox = tbox;
-			}
-		}
-	} else {
-		if (!instance_exists(active_textbox))
-		{
-			active_textbox = noone;
+		if (inst != noone) {
+			startDialogue("Breakfast");
 		}
 	}
 	
 	
-	if (instance_exists(active_textbox)) state = states.dialogue;
+	if (instance_exists(obj_textbox2)) state = states.dialogue;
 	
 
 		

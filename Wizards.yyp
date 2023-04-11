@@ -197,6 +197,7 @@
     {"id":{"name":"fnt_sidebutton","path":"fonts/fnt_sidebutton/fnt_sidebutton.yy",},},
     {"id":{"name":"obj_books","path":"objects/obj_books/obj_books.yy",},},
     {"id":{"name":"obj_shelf03","path":"objects/obj_shelf03/obj_shelf03.yy",},},
+    {"id":{"name":"spr_indicator","path":"sprites/spr_indicator/spr_indicator.yy",},},
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},},
     {"id":{"name":"spr_shop_ui","path":"sprites/spr_shop_ui/spr_shop_ui.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},

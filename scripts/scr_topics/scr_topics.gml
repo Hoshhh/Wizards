@@ -17,3 +17,24 @@ global.topics[$ "Good Morning"] = [
 	TEXT("I can't complain, execpt for one thing..."),
 	TEXT("My potion turned my staff into a blue!")
 ];
+
+global.topics[$ "Breakfast"] = [
+	SPEAKER("Oldman", spr_portrait_oldman, PORTRAIT_SIDE.LEFT),
+	CHOICE("What do you want for breakfast?",
+		OPTION("Eggs probably", "Chose Eggs"),
+		OPTION("Pancakes probably", "Chose Pancakes"))
+];
+
+global.topics[$ "Chose Eggs"] = [
+	TEXT("That's a healthy way to start the day!"),
+	GOTO("End of Breakfast")
+];
+
+global.topics[$ "Chose Pancakes"] = [
+	TEXT("Ooh, yummy!"),
+	GOTO("End of Breakfast")
+];
+
+global.topics[$ "End of Breakfast"] = [
+	TEXT("Goodbye, now!")
+];

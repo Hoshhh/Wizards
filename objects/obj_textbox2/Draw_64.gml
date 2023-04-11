@@ -51,3 +51,24 @@ draw_set_valign(fa_top);
 draw_set_font(text_font);
 draw_set_color(text_color);
 type(draw_text_x + text_x, draw_text_y + text_y, text, text_progress, draw_text_width);
+
+// Options
+if (finished && option_count > 0) {
+	draw_set_valign(fa_middle);
+	draw_set_color(option_text_color);
+	for (var i = 0; i < option_count; i++) {
+		var option_w = max(string_width(options[i].text), option_width) * 0.25;
+		var opt_x = x + option_x;
+		var opt_y = y + option_y - (option_count - i - 1) * option_spacing;
+		
+		// Selected option is indented with an arrow
+		if (i == current_option) {
+			opt_x += option_selection_indent;
+			draw_sprite(spr_indicator, 0, opt_x + option_text_x-8, opt_y + (text_y*2 + 4));
+		}
+		
+		//type(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, text_progress, draw_text_width+50);
+		//draw_sprite_stretched(spr_name_bg, 0, opt_x + option_text_x - 4, opt_y + (text_y*2 + 4) - option_height / 2, option_w+8, option_height);
+		draw_text_transformed(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, 0.25, 0.25, 0);
+	}
+}

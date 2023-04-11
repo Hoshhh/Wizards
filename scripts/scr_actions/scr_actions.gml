@@ -1,5 +1,8 @@
 #macro TEXT new TextAction
 #macro SPEAKER new SpeakerAction
+#macro CHOICE new ChoiceAction
+#macro OPTION new OptionAction
+#macro GOTO new GotoAction
 
 function DialogueAction() constructor {
 	act = function () {};	
@@ -30,5 +33,41 @@ function SpeakerAction(_name, _sprite = undefined, _side = undefined): DialogueA
 		}
 		
 		textbox.next();
+	}
+}
+
+// Define a branch in the dialogue
+function ChoiceAction(_text) : DialogueAction() constructor {
+	text = _text;
+
+	// Fill this array with all the arguments after the first one
+	options = [];
+	for (var i = 1; i < argument_count; i++)
+		array_push(options, argument[i]);
+
+	act = function(textbox) {
+		textbox.setText(text);
+		textbox.options = options;
+		textbox.option_count = array_length(options);
+		textbox.current_option = 0;
+	}
+}
+
+// Place options within the ChoiceAction
+function OptionAction(_text, _topic): DialogueAction() constructor {
+	text = _text;
+	topic = _topic;
+
+	act = function(textbox) {
+		textbox.setTopic(topic);
+	}
+}
+
+// Automatically go to a specified topic
+function GotoAction(_topic): DialogueAction() constructor {
+	topic = _topic;
+
+	act = function(textbox) {
+		textbox.setTopic(topic);
 	}
 }
