@@ -54,7 +54,8 @@ for (var i = 0; i < array_length(stock_page); i++) {
 	#endregion
 	
 	#region Drawing shop information
-	
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_center);
 	if (i = 0) {
 		var c = c_white;
 		draw_text_transformed_color(item_name_x, item1_name_y, string(iname), 0.2*scale, 0.2*scale, 0, c,c,c,c, 1);

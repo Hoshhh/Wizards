@@ -100,6 +100,8 @@ draw_sprite_part_ext(
 	
 var sx = 0;
 var sy = 0;
+
+draw_set_valign(fa_top);
 	
 for (var i = 0; i < INVENTORY_SLOTS; i++) {
 	

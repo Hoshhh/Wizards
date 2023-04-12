@@ -48,10 +48,10 @@ item4_name_y = store_ui_y + (76 * scale);
 
 //Position for item stock amount
 item_stock_x = store_ui_x + (102 * scale); 
-item1_stock_y = store_ui_y + (22 * scale); 
-item2_stock_y = store_ui_y + (40 * scale); 
-item3_stock_y = store_ui_y + (58 * scale); 
-item4_stock_y = store_ui_y + (76 * scale); 
+item1_stock_y = store_ui_y + (24 * scale); 
+item2_stock_y = store_ui_y + (42 * scale); 
+item3_stock_y = store_ui_y + (60 * scale); 
+item4_stock_y = store_ui_y + (78 * scale); 
 
 //Button locations that set the amount to craft
 sub_button_x = store_ui_x + (115 * scale);
@@ -81,10 +81,10 @@ purchase_select = 0;
 
 //Position for amount to purchase
 num_x = store_ui_x + (133 * scale);
-num1_y = store_ui_y + (22 * scale);
-num2_y = store_ui_y + (40 * scale);
-num3_y = store_ui_y + (58 * scale);
-num4_y = store_ui_y + (76 * scale);
+num1_y = store_ui_y + (24 * scale);
+num2_y = store_ui_y + (42 * scale);
+num3_y = store_ui_y + (60 * scale);
+num4_y = store_ui_y + (78 * scale);
 item1_num = 0;
 item2_num = 0;
 item3_num = 0;

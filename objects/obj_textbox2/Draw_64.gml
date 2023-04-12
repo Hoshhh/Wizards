@@ -39,7 +39,7 @@ if (speaker_name != "") {
 	draw_sprite_stretched(spr_name_bg, 0, x + speaker_x, y + speaker_y - speaker_height / 2, name_w, speaker_height);
 	
 	draw_set_halign(fa_center);
-	draw_set_valign(fa_center);
+	draw_set_valign(fa_middle);
 	draw_set_font(speaker_font);
 	draw_set_color(speaker_color);
 	draw_text_transformed(x + speaker_x + name_w / 2, y + speaker_y, speaker_name, 0.25, 0.25, 0);
@@ -72,3 +72,4 @@ if (finished && option_count > 0) {
 		draw_text_transformed(opt_x + option_text_x, opt_y + (text_y*2 + 4), options[i].text, 0.25, 0.25, 0);
 	}
 }
+draw_set_valign(fa_middle);
