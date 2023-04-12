@@ -38,3 +38,25 @@ global.topics[$ "Chose Pancakes"] = [
 global.topics[$ "End of Breakfast"] = [
 	TEXT("Goodbye, now!")
 ];
+
+
+//Shop
+global.topics[$ "Shop"] = [
+	SPEAKER("Oldman", spr_portrait_oldman, PORTRAIT_SIDE.LEFT),
+	CHOICE("Hello, would you like to see what I have for sell?",
+	OPTION("Sure!", "Yes Shop"),
+	OPTION("No thank you.", "No Shop")),
+];
+
+global.topics[$ "Yes Shop"] = [
+	CUSTOM(function(textbox) {
+		with(oStore) {
+			variable_instance_set(id, "show_store", true);	
+		}
+		textbox.next();
+	}),
+];
+
+global.topics[$ "No Shop"] = [
+	TEXT("Goodbye, for now!")
+];

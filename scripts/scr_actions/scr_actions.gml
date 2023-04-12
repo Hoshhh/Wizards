@@ -3,6 +3,7 @@
 #macro CHOICE new ChoiceAction
 #macro OPTION new OptionAction
 #macro GOTO new GotoAction
+#macro CUSTOM new CustomAction
 
 function DialogueAction() constructor {
 	act = function () {};	
@@ -70,5 +71,13 @@ function GotoAction(_topic): DialogueAction() constructor {
 
 	act = function(textbox) {
 		textbox.setTopic(topic);
+	}
+}
+
+function CustomAction(_action): DialogueAction() constructor {
+	action = _action;
+	
+	act = function(textbox) {
+		action(textbox);
 	}
 }

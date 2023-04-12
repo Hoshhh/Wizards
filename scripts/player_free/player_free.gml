@@ -103,10 +103,10 @@ function player_free(){
 	//Collisions with NPCs
 	//Text Box
 	if (input_interact) {
-		var inst = collision_rectangle(x-radius, y-radius, x+radius, y+radius, par_npc, false, false);
+		var inst = collision_rectangle(x-radius, y-radius, x+radius, y+radius, obj_oldman, false, false);
 	
 		if (inst != noone) {
-			startDialogue("Breakfast");
+			startDialogue("Shop");
 		}
 	}
 	

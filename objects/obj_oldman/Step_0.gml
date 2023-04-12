@@ -11,3 +11,11 @@ if (did_change == 1) {
 		global.oldman = obj_oldman2;	
 	}
 }
+
+var _col = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom + 4, obj_player, false, false) != noone
+
+if (!_col) {
+	with(oStore) {
+		show_store = false;	
+	}
+}
