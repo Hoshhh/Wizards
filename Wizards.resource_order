@@ -140,6 +140,7 @@
     {"name":"par_tree","order":5,"path":"objects/par_tree/par_tree.yy",},
     {"name":"spr_inventory_toolbar","order":5,"path":"sprites/spr_inventory_toolbar/spr_inventory_toolbar.yy",},
     {"name":"tile_alchemy2","order":3,"path":"tilesets/tile_alchemy2/tile_alchemy2.yy",},
+    {"name":"rm_gif","order":11,"path":"rooms/rm_gif/rm_gif.yy",},
     {"name":"MushroomWonder","order":1,"path":"scripts/MushroomWonder/MushroomWonder.yy",},
     {"name":"spr_crop_col","order":1,"path":"sprites/spr_crop_col/spr_crop_col.yy",},
     {"name":"obj_player_display","order":1,"path":"objects/obj_player_display/obj_player_display.yy",},
