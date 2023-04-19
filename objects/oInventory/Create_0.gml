@@ -1,7 +1,7 @@
 INVENTORY_SLOTS  = 15;
 depth = -1;
 scale = 1;
-
+//
 cell_size = 16;
 inv_slots_width = 5;
 inv_slots_height = 4;
