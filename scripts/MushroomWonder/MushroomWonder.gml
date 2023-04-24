@@ -2,8 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function MushroomWonder(){
 	counter += 1;
-	x += moveX;
-	y += moveY;
+	//x += moveX;
+	//y += moveY;
+	mp_potential_step_object(x + moveX, y + moveY, enemySpeed, all);
+	//move_and_collide(moveX, moveY, all)
 	
 	//Transition Triggers
 	if (counter >= room_speed * 2) {
@@ -25,6 +27,10 @@ function MushroomWonder(){
 				moveX = lengthdir_x(_speedThisFrame, direct);
 				moveY = lengthdir_y(_speedThisFrame, direct);
 				counter = 0;
+				
+				if (instance_position(x + moveX, y + moveY, all) != noone) {
+					state = ENEMYSTATE.IDLE;
+				}
 		}
 	}
 	
