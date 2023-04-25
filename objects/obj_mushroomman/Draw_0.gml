@@ -1,8 +1,8 @@
-event_inherited();
-
 draw_set_alpha(0.3)
 draw_circle_color(x,y-8, enemyAggroRadius, c_white, c_white, false);
 draw_set_alpha(1);
+
+event_inherited();
 
 c = c_white;
 draw_set_font(fnt_dialogue);
