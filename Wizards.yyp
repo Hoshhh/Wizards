@@ -188,6 +188,7 @@
     {"id":{"name":"spr_oldman","path":"sprites/spr_oldman/spr_oldman.yy",},},
     {"id":{"name":"snd_voice1","path":"sounds/snd_voice1/snd_voice1.yy",},},
     {"id":{"name":"create_textbox","path":"scripts/create_textbox/create_textbox.yy",},},
+    {"id":{"name":"rm_town","path":"rooms/rm_town/rm_town.yy",},},
     {"id":{"name":"instance_nth_nearest","path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},},
     {"id":{"name":"spr_player_collision","path":"sprites/spr_player_collision/spr_player_collision.yy",},},
     {"id":{"name":"cutscene_change_xscale","path":"scripts/cutscene_change_xscale/cutscene_change_xscale.yy",},},
@@ -379,6 +380,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"init","path":"rooms/init/init.yy",},},
     {"roomId":{"name":"rm_creator","path":"rooms/rm_creator/rm_creator.yy",},},
+    {"roomId":{"name":"rm_town","path":"rooms/rm_town/rm_town.yy",},},
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
     {"roomId":{"name":"rm_empty","path":"rooms/rm_empty/rm_empty.yy",},},
     {"roomId":{"name":"rm_gif","path":"rooms/rm_gif/rm_gif.yy",},},

@@ -103,6 +103,7 @@
     {"name":"obj_mushroomman","order":3,"path":"objects/obj_mushroomman/obj_mushroomman.yy",},
     {"name":"obj_eyebook","order":12,"path":"objects/obj_eyebook/obj_eyebook.yy",},
     {"name":"create_textbox","order":1,"path":"scripts/create_textbox/create_textbox.yy",},
+    {"name":"rm_town","order":12,"path":"rooms/rm_town/rm_town.yy",},
     {"name":"instance_nth_nearest","order":1,"path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},
     {"name":"spr_player_collision","order":2,"path":"sprites/spr_player_collision/spr_player_collision.yy",},
     {"name":"cutscene_change_xscale","order":5,"path":"scripts/cutscene_change_xscale/cutscene_change_xscale.yy",},
