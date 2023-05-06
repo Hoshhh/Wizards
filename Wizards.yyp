@@ -105,7 +105,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.0.71",
+    "IDEVersion": "2023.4.0.84",
   },
   "resources": [
     {"id":{"name":"obj_alchemy_table","path":"objects/obj_alchemy_table/obj_alchemy_table.yy",},},
