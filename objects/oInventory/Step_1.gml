@@ -14,7 +14,7 @@ var _obj = inv[bar_selected_slot].obj;
 
 if (keyboard_check_pressed(ord("1")))
 {
-	
+	//
 	bar_selected_prev = bar_selected_slot;
 	bar_selected_slot = 0;
 		
