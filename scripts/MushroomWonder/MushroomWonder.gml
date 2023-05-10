@@ -31,7 +31,12 @@ function MushroomWonder(){
 				if (instance_position(x + moveX, y + moveY, all) != noone) {
 					state = ENEMYSTATE.IDLE;
 				}
+				
+				if (collision_circle(x, y + 8, enemyAggroRadius, obj_player, false, false)) {
+					state = ENEMYSTATE.CHASE;
+				}
 		}
+		
 	}
 	
 	sprite_index = spr_mushroom_run;
