@@ -12,10 +12,10 @@ function MushroomIdle(){
 		}
 	}
 	
-	/*
+	
 	if (collision_circle(x, y + 8, enemyAggroRadius, obj_player, false, false)) {
-		state = ENEMYSTATE.ALERT;
-	}*/
+		state = ENEMYSTATE.CHASE;
+	}
 	
 	//Sprite
 	sprite_index = spr_mushroom_idle;

@@ -2,6 +2,12 @@ event_inherited();
 hp = 100;
 flash = 0
 
+path = path_add();
+calc_path_delay = 30;
+calc_path_timer = irandom(60);
+
+attack_dis = 16;
+
 counter = 0;
 spd = 0.5;
 

@@ -1,6 +1,8 @@
 if (room == rm_creator) exit;
 if (!debug) exit;
 
+mp_grid_draw(global.mp_grid);
+
 var xx = 0;
 var cs = 16;
 

@@ -7,3 +7,5 @@ event_inherited();
 c = c_white;
 draw_set_font(fnt_dialogue);
 draw_text_transformed_color(x-16, y - 32, "State: " + string(state), 0.2, 0.2, 0, c,c,c,c, 1)
+
+draw_path(path, x, y, 0)
