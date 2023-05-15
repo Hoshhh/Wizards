@@ -1,8 +1,8 @@
 var c = #657697
 draw_rectangle_color(x + (194 * scale), (y+(scale*44)), 
 (x+(scale * 242)), (y+(scale*53)), c,c,c,c, false);
-draw_text(x,y, string(writeable))
-draw_text(x,y+16, string(keyboard_string))
+//draw_text(x,y, string(writeable))
+//draw_text(x,y+16, string(keyboard_string))
 
 //draw_text stuff
 draw_set_halign(fa_left);
