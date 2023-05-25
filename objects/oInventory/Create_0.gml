@@ -46,7 +46,7 @@ select_y = inv_ui_y + (5 * scale);
 buttons_x = inv_ui_x + (155 * scale);
 buttons_y = inv_ui_y + (2 * scale);
 
-//Drawing position based on "centered" alignment
+//Drawing position based on "centered" alignmentdsdsd
 draw_button_x = inv_ui_x + (163 * scale); 
 draw_button1_y = inv_ui_y + (8 * scale);
 draw_button2_y = inv_ui_y + (18 * scale);
