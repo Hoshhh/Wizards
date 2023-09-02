@@ -22,7 +22,7 @@ global.topics[$ "Breakfast"] = [
 	SPEAKER("Oldman", spr_portrait_oldman, PORTRAIT_SIDE.LEFT),
 	CHOICE("What do you want for breakfast?",
 		OPTION("Eggs probably", "Chose Eggs"),
-		OPTION("Pancakes probably, limit test", "Chose Pancakes"))
+		OPTION("Pancakes probably, limit testing is hard so im just going to keep typing dawg", "Chose Pancakes"))
 ];
 
 global.topics[$ "Chose Eggs"] = [
