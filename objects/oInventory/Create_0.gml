@@ -6,7 +6,7 @@ cell_size = 16;
 inv_slots_width = 5;
 inv_slots_height = 4;
 mouse_in_inventory = false;
-//
+
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);
 
